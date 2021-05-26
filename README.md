@@ -68,7 +68,7 @@ Copy-paste your `src/css` along with `tailwind.config.js` and paste it [into you
 
 If you need to build, use [Webpack](https://webpack.js.org/), [Parcel](https://parceljs.org/), [Gulp](https://gulpjs.com/) or [Grunt](https://gruntjs.com/), among the most used.
 
-> [Snowpack](https://www.snowpack.dev/) doesn't fully support PostCSS `@import`, use at your own risk.
+> [Snowpack](https://www.snowpack.dev/) [doesn't fully support PostCSS `@import`](https://github.com/snowpackjs/snowpack/discussions/988#discussioncomment-61335), use at your own risk.
 
 ## Road to v1.0
 
