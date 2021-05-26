@@ -56,6 +56,10 @@ This will allow you to do things like this:
 @layer components {
     .profile {
         @apply border-2 w-full text-yellow-800;
+        
+        & > .img {
+            @apply rounded-t;
+        }
     }
 }
 ```
