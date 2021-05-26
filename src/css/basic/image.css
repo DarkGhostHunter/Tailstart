@@ -1,21 +1,9 @@
-@layer base {
+@layer components {
     .img, picture > .img {
         @apply rounded;
 
         &.responsive {
             @apply w-full h-auto;
-        }
-
-        &.caption {
-            @apply inline-block;
-
-            & > img {
-                @apply rounded mb-2;
-            }
-
-            & > figcaption {
-                @apply text-sm text-center text-gray-500;
-            }
         }
 
         &.thumbnail {

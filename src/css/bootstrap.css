@@ -12,6 +12,7 @@
  * Classes that handle multiple Tailwind utilities and behavior.
  */
 @import "tailwindcss/components";
+@import "basic.css";
 @import "components.css";
 
 /**

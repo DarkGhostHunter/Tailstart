@@ -3,6 +3,17 @@
  *
  * These components are added to the "components" layer of Tailwind.
  */
+@import "basic/button.css";
+@import "basic/input.css";
+@import "basic/image.css";
+@import "basic/multimedia.css";
+@import "basic/figure.css";
+
+/**
+ * These are more advanced components crated on top of base tags.
+ *
+ * Feel free to edit them, since these work after you add a distinctive class to them.
+ */
 @import "components/badge.css";
 @import "components/progress.css";
 @import "components/alert.css";

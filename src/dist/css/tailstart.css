@@ -60,6 +60,16 @@
                 @apply text-indigo-300;
             }
 
+            & .tailstart-section-description {
+                @apply px-3 py-2 mb-3 rounded text-center;
+                @apply text-blue-500;
+                @apply bg-white;
+
+                &.tailstart-section-description-warning {
+                    @apply text-yellow-500;
+                }
+            }
+
         }
 
         & ul {
