@@ -1,0 +1,28 @@
+@layer components {
+    .pagination {
+        @apply inline-block border rounded shadow;
+
+        & > ul {
+            @apply flex flex-row divide-x;
+
+            & > li {
+                & > a, & > span {
+                    @apply block px-3 py-2;
+
+                    &.current, &.remain {
+                        @apply text-gray-300 cursor-default;
+                    }
+
+                    & > span {
+                        /** This will allow the text to disappear and make room for the buttons */
+                        @apply hidden md:inline-block;
+                    }
+
+                    & > * {
+                        @apply inline-block;
+                    }
+                }
+            }
+        }
+    }
+}

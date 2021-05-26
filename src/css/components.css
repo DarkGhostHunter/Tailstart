@@ -1,0 +1,30 @@
+/**
+ * Here you can edit your components.
+ *
+ * These components are added to the "components" layer of Tailwind.
+ */
+@import "components/badge.css";
+@import "components/progress.css";
+@import "components/alert.css";
+@import "components/card.css";
+@import "components/list.css";
+@import "components/header.css";
+@import "components/group.css";
+@import "components/table.css";
+@import "components/navigation.css";
+@import "components/breadcrumb.css";
+@import "components/pagination.css";
+
+/**
+ * These components require Javascript to properly function.
+ *
+ * There is a convenient `/src/js/app.js` file you can use to add interactivity to them.
+ */
+@import "components/accordion.css";
+@import "components/dropdown.css";
+@import "components/notification.css";
+@import "components/modal.css";
+@import "components/tooltip.css";
+@import "components/popover.css";
+@import "components/offcanvas.css";
+@import "components/tab.css";

@@ -1,0 +1,18 @@
+/**
+ * This is a good place to add your own Tailwind-style utilities.
+ *
+ * Just for show, there is one you can build upon.
+ */
+@layer utilities {
+   @variants responsive {
+      .scroll-snap-none {
+         scroll-snap-type: none;
+      }
+      .scroll-snap-x {
+         scroll-snap-type: x;
+      }
+      .scroll-snap-y {
+         scroll-snap-type: y;
+      }
+   }
+}

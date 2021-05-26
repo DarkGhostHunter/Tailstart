@@ -1,0 +1,5 @@
+@layer base {
+    p {
+        @apply leading-relaxed mb-4;
+    }
+}

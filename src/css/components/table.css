@@ -1,0 +1,34 @@
+@layer base {
+    .table {
+        @apply border-collapse border rounded table-auto w-full mb-2;
+
+        & > caption {
+            @apply text-gray-500 mt-2 text-sm;
+            caption-side: bottom;
+        }
+
+        & > thead {
+            @apply border-b-2;
+        }
+
+        & > thead, & > tbody, & > tfoot {
+            @apply divide-y;
+
+            & > tr {
+                @apply divide-x;
+
+                & > th, & > td {
+                    @apply px-3 py-2;
+                }
+            }
+        }
+
+        & > tfoot {
+            @apply border-t-2;
+        }
+    }
+
+    .table-responsive {
+        @apply overflow-x-auto md:overflow-x-visible;
+    }
+}

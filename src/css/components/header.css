@@ -1,0 +1,50 @@
+@layer components {
+    /**
+     * App Logo
+     *
+     * This is just the first block where you usually show your application logo.
+     */
+    #app-logo {
+        @apply block;
+
+        & svg {
+            @apply w-auto h-6 m-4 fill-current;
+        }
+    }
+
+    /**
+     * App Header
+     *
+     * This is the only app header. It's usually a bar that hides everything except the logo
+     * to avoid wrapping the elements, and showing a button that would show a menu with the
+     * hidden navigation.
+     */
+    #app-header {
+        @apply border rounded shadow container mx-auto flex flex-row justify-between items-center;
+
+        & > nav {
+            @apply hidden lg:flex flex-row content-center gap-x-4;
+
+            & > form {
+                @apply flex flex-row content-center;
+            }
+
+            & > ul {
+                @apply flex flex-row content-center divide-x;
+                & > li {
+                    @apply px-3 py-2;
+                }
+            }
+        }
+    }
+
+    /**
+     * App Header Collapse
+     *
+     * This button is meant to show only on small screens. Since the navigation is hidden
+     * on small screens, this button can show it using Javascript.
+     */
+    #app-header-toggle {
+        @apply block lg:hidden p-4;
+    }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "tailstart",
+  "description": "Components ready to style with Tailwind CSS",
+  "version": "0.7",
+  "scripts": {
+    "preview": "vite"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.3.0",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^5.3.0",
+    "postcss-nesting": "^8.0.1",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^2.1.2",
+    "vite": "^2.3.3",
+    "@tailwindcss/forms": "^0.3.2"
+  }
+}

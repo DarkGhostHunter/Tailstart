@@ -1,0 +1,25 @@
+@layer components {
+    .nav {
+        @apply inline-block border rounded shadow;
+
+        &.nav-portrait > ul {
+            @apply flex-col divide-x-0 divide-y;
+        }
+
+        & > ul {
+            @apply flex flex-col md:flex-row divide-x;
+
+            & > li > a {
+                @apply block px-3 py-2;
+
+                &.active {
+                    @apply text-blue-500;
+                }
+
+                &.disabled {
+                    @apply text-gray-500 cursor-not-allowed;
+                }
+            }
+        }
+    }
+}

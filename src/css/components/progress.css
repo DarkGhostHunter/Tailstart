@@ -1,0 +1,92 @@
+@layer components {
+    .progress {
+        @apply relative h-6 w-full mb-2 rounded border overflow-hidden shadow-sm;
+
+        & .progress-bar {
+            @apply h-full mb-2 bg-gray-400;
+            @apply transition-all;
+
+            &[data-indeterminate] {
+                @apply max-w-full !important;
+                animation: 1s ease-in-out infinite progress-bar-animation;
+                background-image: linear-gradient(
+                    45deg,
+                    rgba(255, 255, 255, .2) 25%,
+                    transparent 25%,
+                    transparent 50%,
+                    rgba(255, 255, 255, .2) 50%,
+                    rgba(255, 255, 255, .2) 75%,
+                    transparent 75%,
+                    transparent
+                );
+                background-size: 2rem 2rem;
+            }
+        }
+
+        &.progress-gray {
+            @apply border-gray-500;
+            & > .progress-bar {
+                @apply bg-gray-500;
+            }
+        }
+
+        &.progress-red {
+            @apply border-red-500;
+            & > .progress-bar {
+                @apply bg-red-500;
+            }
+        }
+
+        &.progress-yellow {
+            @apply border-yellow-500;
+            & > .progress-bar {
+                @apply bg-yellow-500;
+            }
+        }
+
+        &.progress-green {
+            @apply border-green-500;
+            & > .progress-bar {
+                @apply bg-green-500;
+            }
+        }
+
+        &.progress-blue {
+            @apply border-blue-500;
+            & > .progress-bar {
+                @apply bg-blue-500;
+            }
+        }
+
+        &.progress-indigo {
+            @apply border-indigo-500;
+            & > .progress-bar {
+                @apply bg-indigo-500;
+            }
+        }
+
+        &.progress-purple {
+            @apply border-purple-500;
+            & > .progress-bar {
+                @apply bg-purple-500;
+            }
+        }
+
+        &.progress-pink {
+            @apply border-pink-500;
+            & > .progress-bar {
+                @apply bg-pink-500;
+            }
+        }
+
+        & > progress {
+            @apply hidden;
+        }
+    }
+}
+
+@keyframes progress-bar-animation {
+    0% {
+        background-position-x: 2rem;
+    }
+}

@@ -1,0 +1,28 @@
+@layer components {
+    .breadcrumb {
+        @apply inline-block;
+
+        & > ol {
+            @apply border rounded shadow flex flex-row gap-x-2;
+
+            & > li {
+                @apply relative px-2 py-1;
+
+                /* Magic arrow */
+                &:before {
+                    @apply absolute block -right-2 mt-2 border h-2 w-2;
+                    content: "";
+                    border-right: none;
+                    border-bottom: none;
+                    transform: rotate(135deg);
+                }
+
+                &:last-child {
+                    &:before {
+                        @apply hidden;
+                    }
+                }
+            }
+        }
+    }
+}
