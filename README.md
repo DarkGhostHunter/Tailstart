@@ -83,5 +83,6 @@ If you need to build, use [Webpack](https://webpack.js.org/), [Parcel](https://p
 - [ ] Javascript - Tab (0.9.7)
 - [ ] Javascript tests (1.0.0)
 
-License
+## License
+
 This package is open-sourced software licensed under the [MIT license](LICENSE).
