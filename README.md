@@ -14,9 +14,14 @@ This is useful when you need a visual guidelines to implement from the very base
 
 Simple call your Node.js package manager of choice, like `npm`:
 
-    npm install tailstart
+    git clone https://github.com/DarkGhostHunter/Tailstart.git my-new-project
+    rm my-new-project/.git
+    cd my-new-project
+    npm install
 
 If you don't have Node.js, [this is a good opportunity to install it](https://nodejs.org/).
+
+> If you're using Windows, install [Git](https://gitforwindows.org/) or [Github Desktop](https://desktop.github.com/).
 
 ## Usage
 
@@ -36,11 +41,11 @@ To start developing, just call `npm mix`:
         │   public/tailstart/css/tailstart.css │ 16.9 KiB  │
         └──────────────────────────────────────┴───────────┘
 
-This will run a [local BrowserSync server](http://localhost:3000/), with all the HTML pieces described.
+This will run a [local BrowserSync server](http://localhost:3000/), with all the HTML pieces to style and their description.
 
 ![img.png](index.png)
 
-Simply head to the `resources/css` directory and start editing each file. Almost all stylesheets have some minor guidelines, so you can follow along, or remove them and start from scratch.
+Simply head to the `resources/css` directory and start editing each file. Almost all stylesheets have some minor guidelines you can follow along, or remove them and start from scratch.
 
 ![img_1.png](css.png)
 
@@ -48,7 +53,7 @@ Simply head to the `resources/css` directory and start editing each file. Almost
 
 ## Component Extraction vs Vanilla Tailwind CSS
 
-> TL;DR: If you need the smallest CSS output for production, you shouldn't use this package. 
+> TL;DR: If you need the smallest CSS output for production, Component Extraction won't be your friend. 
 
 The advantage of using vanilla Tailwind CSS over HTML is a very small CSS final build, as it will purge unused CSS from the framework itself by reading files like PHP, HTML or JS. With the JIT engine, wasting hours configuring the variants needed (like `hover:focus:md` and so on) it's unnecessary.
 
