@@ -2,5 +2,10 @@ node_modules
 .DS_Store
 *.local
 yarn.lock
+yarn.error
 package.lock
 .idea
+public/css
+public/js
+public/tailstart
+mix-manifest.json

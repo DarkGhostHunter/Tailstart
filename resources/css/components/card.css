@@ -1,0 +1,36 @@
+@layer components {
+    .card {
+        @apply flex flex-col border rounded shadow-sm divide-y;
+
+        & .card-body, & .card-header, & .card-footer {
+            @apply px-3 py-2;
+        }
+
+        & .card-header, & .card-title {
+            @apply text-xl;
+        }
+
+        & .card-header {
+            @apply mb-0;
+        }
+
+        & .card-header {
+            @apply px-3 py-2;
+
+            & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+                @apply mb-0;
+            }
+        }
+
+        & > .card-picture {
+            @apply w-full h-auto mb-0;
+        }
+
+        &.card-landscape {
+            @apply md:flex-row md:divide-y-0 md:divide-x;
+            & < * {
+                @apply w-full md:w-auto ;
+            }
+        }
+    }
+}

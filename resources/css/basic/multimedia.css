@@ -1,0 +1,66 @@
+@layer components {
+    .iframe, .mm-player {
+        @apply h-auto w-full border rounded;
+    }
+
+    .iframe {
+        @apply overflow-hidden;
+
+        & > iframe {
+            @apply w-full;
+        }
+    }
+
+    .mm-player {
+        & .mm-title {
+            @apply px-3 py-2 bg-gray-50 rounded-t;
+        }
+
+        & > audio {
+            @apply hidden;
+        }
+
+        & > video {
+            @apply -mt-2 w-full h-auto rounded-b;
+        }
+
+        & > .mm-controls {
+            @apply flex flex-row place-items-center gap-x-2 px-3 py-2;
+
+            & > .mm-progress {
+                @apply flex flex-row flex-wrap justify-between w-full;
+
+                & > .mm-current, & > .mm-duration {
+                    @apply text-gray-500 text-sm;
+                }
+            }
+
+            & .mm-play:not([hidden]),
+            & .mm-pause:not([hidden]),
+            & .mm-mute:not([hidden]),
+            & .mm-unmute:not([hidden]) {
+                @apply block text-gray-500;
+
+                &:hover, &:focus {
+                    @apply text-blue-400 stroke-current;
+                }
+
+                & > svg {
+                    @apply stroke-1;
+                }
+            }
+
+            & .mm-volume > button:not([hidden]) {
+                @apply block;
+            }
+        }
+
+        &.video {
+            @apply relative;
+
+            & .mm-controls {
+                @apply absolute bottom-0 w-full bg-white opacity-80 rounded-b;
+            }
+        }
+    }
+}

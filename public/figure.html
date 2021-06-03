@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML files ready to style with Tailwind CSS.">
+    <link href="tailstart/css/tailstart.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <title>Tailstrap - Audio</title>
+</head>
+<body>
+
+<div class="tailstart-html-header">
+    <div class="tailstart-container">
+        <a href="index.html" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"/>
+            </svg>
+            Go Back
+        </a>
+    </div>
+</div>
+
+<div class="tailstart-container">
+
+    <div class="tailstart-separator">Content Figure</div>
+
+    <!-- Content Figure -->
+
+    <div>
+        <figure class="fig">
+            <div class="fig-body">This is just a simple text.</div>
+            <figcaption>Example caption for the image.</figcaption>
+        </figure>
+    </div>
+
+    <div class="tailstart-separator">Image Figure</div>
+
+    <!-- Image Figure -->
+
+    <div>
+        <figure class="fig">
+            <div class="fig-body">
+                <img class="img" src="https://picsum.photos/1280/720" alt="Sample image">
+            </div>
+            <figcaption>Example caption for the image.</figcaption>
+        </figure>
+    </div>
+
+    <div class="tailstart-separator">Picture Figure</div>
+
+    <!-- Picture Figure -->
+
+    <div>
+        <figure class="fig">
+            <picture class="fig-body">
+                <source srcset="https://picsum.photos/640/480" media="(min-width: 640px)">
+                <source srcset="https://picsum.photos/1024/768" media="(min-width: 1024px)">
+                <source srcset="https://picsum.photos/1280/720" media="(min-width: 1280px)">
+                <img class="img" src="https://picsum.photos/1280/720" alt="Sample image">
+            </picture>
+            <figcaption>Example caption for the picture.</figcaption>
+        </figure>
+    </div>
+
+    <div class="tailstart-separator">Video Figure</div>
+
+    <!-- Video Figure -->
+
+    <div>
+        <figure class="fig">
+            <video class="fig-body" controls="controls" preload="metadata"
+                   poster="http://media.w3.org/2010/05/sintel/poster.png">
+                <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'/>
+                <source src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm'/>
+                <source src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg'/>
+                <track kind="subtitles" label="English subtitles" src="subtitles_en.vtt" srclang="en" default/>
+                <track kind="subtitles" label="Deutsche Untertitel" src="subtitles_de.vtt" srclang="de"/>
+                <p class="player-unsupported">Your user agent does not support the HTML5 Video element.</p>
+            </video>
+            <figcaption>Example caption for the video.</figcaption>
+        </figure>
+    </div>
+
+    <div class="tailstart-separator">Audio Figure</div>
+
+    <!-- Audio Figure -->
+
+    <div>
+        <figure class="fig">
+            <audio class="fig-body" controls="controls">
+                <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.mp4" type='audio/mp4'>
+                <source src="http://media.w3.org/2010/07/bunny/04-Death_Becomes_Fur.oga" type='audio/ogg; codecs=vorbis'>
+                <p>Your user agent does not support the HTML5 Audio element.</p>
+            </audio>
+            <figcaption>Example caption for the audio.</figcaption>
+        </figure>
+    </div>
+
+
+    <div class="tailstart-separator">iframe Figure</div>
+
+    <!-- iframe Figure -->
+
+    <div>
+        <figure class="fig">
+            <div class="iframe fig-body">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <figcaption>Example caption for the audio.</figcaption>
+        </figure>
+    </div>
+
+    <div class="tailstart-separator"></div>
+</div>
+</body>
+</html>

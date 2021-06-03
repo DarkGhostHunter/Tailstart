@@ -1,0 +1,36 @@
+@layer base {
+    /**
+     * Here you have two options:
+     *
+     * 1. Revert back the style to the lists, and use a "list-unstyled" to strip them down.
+     * 2. Keep the lists unstyled, and use a class container to add their style back.
+     *
+     * Because it's saner for the option 2, we will use the `text-content` class for that.
+     *
+     *     <div class="text-content">
+     *        <ul>
+     *            <li>....
+     *        </ul>
+     *     </div>
+     */
+    .text-content {
+        & ul, & ol {
+            @apply ml-4;
+
+            list-style: revert;
+
+            & li {
+                @apply ml-4 mb-2;
+            }
+        }
+
+        & dl {
+            @apply grid grid-cols-2 overflow-y-auto;
+            grid-template-columns: auto max-content;
+
+            & > dt {
+                @apply font-bold mb-2;
+            }
+        }
+    }
+}

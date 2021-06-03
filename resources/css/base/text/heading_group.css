@@ -1,0 +1,12 @@
+@layer base {
+    hgroup {
+        @apply mb-8;
+
+        & > *:first-child {
+            @apply mb-2;
+        }
+        & > *:last-child {
+            @apply text-gray-500 font-light mb-0;
+        }
+    }
+}

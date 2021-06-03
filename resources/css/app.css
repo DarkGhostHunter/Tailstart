@@ -1,0 +1,24 @@
+/**
+ * Base
+ *
+ * Resets browser text style and tags behaviour.
+ */
+@import "tailwindcss/base";
+@import "base.css";
+
+/**
+ * Components
+ *
+ * Classes that handle multiple Tailwind utilities and behavior.
+ */
+@import "tailwindcss/components";
+@import "components.css";
+
+
+/**
+ * Utilities
+ *
+ * Simple classes that simplify CSS properties.
+ */
+@import "tailwindcss/utilities";
+@import "utilities.css";

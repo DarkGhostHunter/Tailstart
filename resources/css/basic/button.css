@@ -1,0 +1,54 @@
+@layer components {
+    .btn {
+        @apply border rounded inline-block border-gray-300 px-3 py-2;
+
+        &.disabled, &[disabled] {
+            @apply pointer-events-none cursor-not-allowed shadow-none opacity-90;
+        }
+
+        &:hover, &:focus {
+            @apply ring ring-gray-200;
+        }
+
+        &.btn-sm {
+            @apply text-sm px-2 py-1;
+        }
+
+        &.btn-light {
+            @apply text-gray-700 bg-gray-200 border-gray-200 ring-gray-100;
+        }
+
+        &.btn-dark {
+            @apply text-white bg-gray-700 border-gray-700 ring-gray-200;
+        }
+
+        &.btn-red {
+            @apply text-white bg-red-600 border-red-600 ring-red-200;
+        }
+
+        &.btn-pink {
+            @apply text-white bg-pink-600 border-pink-600 ring-pink-200;
+        }
+
+        &.btn-yellow {
+            @apply text-white bg-yellow-600 border-yellow-600 ring-yellow-200;
+        }
+
+        &.btn-green {
+            @apply text-white bg-green-600 border-green-600 ring-green-200;
+        }
+
+        &.btn-blue {
+            @apply text-white bg-blue-600 border-blue-600 ring-blue-200;
+        }
+
+        &.btn-indigo {
+            @apply text-white bg-indigo-600 border-indigo-600 ring-indigo-200;
+        }
+
+        &.btn-purple {
+            @apply text-white bg-purple-600 border-purple-600 ring-purple-200;
+        }
+
+    }
+}

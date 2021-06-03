@@ -1,9 +1,0 @@
-@layer components {
-    .list-group {
-        @apply flex-row border rounded shadow divide-y;
-
-        & > * {
-            @apply block px-3 py-2;
-        }
-    }
-}

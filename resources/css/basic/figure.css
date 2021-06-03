@@ -1,0 +1,13 @@
+@layer components {
+    .fig {
+        @apply border rounded p-2 mb-2;
+
+        & > .fig-body {
+            @apply block mb-2 border-0;
+        }
+
+        & > figcaption {
+            @apply text-sm text-gray-400;
+        }
+    }
+}

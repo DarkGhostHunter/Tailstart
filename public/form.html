@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML files ready to style with Tailwind CSS.">
+    <link href="tailstart/css/tailstart.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <title>Tailstrap - Forms</title>
+</head>
+<body>
+
+<div class="tailstart-html-header">
+    <div class="tailstart-container">
+        <a href="index.html" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
+            </svg>
+            Go Back
+        </a>
+    </div>
+</div>
+
+<div class="tailstart-container">
+
+    <div class="tailstart-separator">Simple Form</div>
+
+    <!-- Simple Form -->
+    <form>
+        <div>
+            <label for="example-message-email">Your email</label>
+            <input class="form-control" type="email" placeholder="test.address@email.com" id="example-message-email">
+            <label for="example-message-select">What's your favorite ice cream flavor?</label>
+            <select class="form-control" id="example-message-select">
+                <option value="Option 1">Vanilla</option>
+                <option value="Option 2">Chocolate</option>
+                <option value="Option 3">Can I get your number?</option>
+            </select>
+        </div>
+        <div>
+            <label for="example-message">Message</label>
+            <textarea class="form-control" placeholder="Placeholder message..." id="example-message"></textarea>
+        </div>
+        <div>
+            <label>
+                <input class="form-control" type="checkbox">
+                <span class="">Yes, I'm not a robot</span>
+            </label>
+        </div>
+        <input class="form-control" type="submit" value="Submit">
+        <button class="btn" type="submit">Submit</button>
+    </form>
+
+    <div class="tailstart-separator">Inputs</div>
+
+    <!-- Inputs -->
+
+    <div>
+        <label class="block mb-3" for="example-input-text">
+            <input class="form-control" type="text" id="example-input-text" placeholder="Example placeholder">
+        </label>
+    </div>
+
+    <div>
+        <label class="block mb-3" for="example-input-email">
+            <input class="form-control" type="email" id="example-input-email" placeholder="myemail@service.com">
+        </label>
+    </div>
+
+    <div>
+        <label class="block mb-3" for="example-input-readonly">
+            <input class="form-control" type="text" id="example-input-readonly" placeholder="This is a read-only text" readonly>
+        </label>
+    </div>
+
+    <div>
+        <label class="block mb-3" for="example-input-readonly">
+            <input class="form-control" type="text" id="example-input-readonly-with-value" value="Read-only value" readonly>
+        </label>
+    </div>
+
+    <div>
+        <label class="block mb-3" for="example-input-disabled">
+            <input class="form-control" type="text" id="example-input-disabled" placeholder="Example placeholder" disabled>
+        </label>
+    </div>
+
+    <div>
+        <label class="block mb-3" for="example-input-disabled">
+            <input class="form-control" type="text" id="example-input-disabled-with-value" value="Disabled with value" disabled>
+        </label>
+    </div>
+
+    <div class="tailstart-separator">Numeric</div>
+
+    <!-- Numeric -->
+
+    <div class="mb-3">
+        <label for="example-input-number">
+            Select your favorite number
+        </label>
+        <input id="example-input-number" type="number" class="form-control" placeholder="Number">
+    </div>
+
+    <div class="mb-3">
+        <label for="example-input-number-disabled">
+            Select your favorite number
+        </label>
+        <input id="example-input-number-disabled" type="number" class="form-control" placeholder="Number" disabled>
+    </div>
+
+    <div class="tailstart-separator">Select dropdowns</div>
+
+    <!-- Select  -->
+
+    <div class="mb-3">
+        <label for="example-select">What's your favorite ice cream flavor?</label>
+        <select class="form-control" id="example-select">
+            <option selected>Open this select menu</option>
+            <option value="Option 1">Vanilla</option>
+            <option value="Option 2">Chocolate</option>
+            <option value="Option 3">Can I get your number?</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="example-select-multiple">What's your favorite ice cream flavor?</label>
+        <select class="form-control" id="example-select-multiple" multiple>
+            <option selected>Open this select menu</option>
+            <option value="Option 1">Vanilla</option>
+            <option value="Option 2">Chocolate</option>
+            <option value="Option 3">Can I get your number?</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="example-select-disabled">What's your favorite ice cream flavor?</label>
+        <select class="form-control" id="example-select-disabled" disabled>
+            <option selected>Open this select menu</option>
+            <option value="Option 1">Vanilla</option>
+            <option value="Option 2">Chocolate</option>
+            <option value="Option 3">Can I get your number?</option>
+        </select>
+    </div>
+
+    <div class="tailstart-separator">Search</div>
+
+    <!-- Search -->
+
+    <div class="mb-3">
+        <label for="example-input-search">Search Example</label>
+        <input type="search" id="example-input-search" class="form-control" placeholder="Search input">
+    </div>
+
+    <div class="mb-3">
+        <label for="example-input-search-disabled">Search Example</label>
+        <input type="search" id="example-input-search-disabled" class="form-control" placeholder="Search input" disabled>
+    </div>
+
+    <div class="tailstart-separator">Datalist</div>
+
+    <!-- Datalist -->
+
+    <div class="mb-3">
+        <label for="example-datalist">Datalist example</label>
+        <input type="text" class="form-dataset" list="example-datalist-options" id="example-datalist" placeholder="Type to search...">
+        <datalist id="example-datalist-options">
+            <option value="Red" />
+            <option value="Green" />
+            <option value="Blue" />
+            <option value="Cyan" />
+            <option value="Magenta" />
+            <option value="Yellow" />
+        </datalist>
+    </div>
+
+    <div class="mb-3">
+        <label for="example-datalist-disabled">Datalist example</label>
+        <input type="text" class="form-control" list="example-datalist-options" id="example-datalist-disabled" placeholder="Type to search..." disabled>
+        <datalist id="example-datalist-options-disabled">
+            <option value="Red" />
+            <option value="Green" />
+            <option value="Blue" />
+            <option value="Cyan" />
+            <option value="Magenta" />
+            <option value="Yellow" />
+        </datalist>
+    </div>
+
+
+    <div class="tailstart-separator">Checkboxes</div>
+
+    <!-- Checkboxes -->
+
+    <div class="mb-3">
+        <input class="form-check" type="checkbox" value="" id="custom-checkbox-example-foo">
+        <label for="custom-checkbox-example-foo">
+            Checkbox foo
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-check" type="checkbox" value="" id="custom-checkbox-example-bar" checked>
+        <label for="custom-checkbox-example-bar">
+            Checkbox bar
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-check" type="checkbox" value="" id="custom-checkbox-example-indeterminate">
+        <label for="custom-checkbox-example-indeterminate">
+            Indeterminate checkbox
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-check" type="checkbox" value="" id="custom-checkbox-example-disabled-checked" checked disabled>
+        <label for="custom-checkbox-example-disabled-checked">
+            Disabled checkbox checked
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-check" type="checkbox" value="" id="custom-checkbox-example-disabled" disabled>
+        <label for="custom-checkbox-example-disabled">
+            Disabled checkbox
+        </label>
+    </div>
+
+    <div class="tailstart-separator">Radios</div>
+
+    <!-- Radios -->
+
+    <div class="mb-3">
+        <input type="radio" name="example-radio" value="" id="custom-radio-example-foo">
+        <label for="custom-radio-example-foo">
+            Radio foo
+        </label>
+    </div>
+
+    <div class="mb-3">
+        <input type="radio" name="example-radio" value="" id="custom-radio-example-bar" checked>
+        <label for="custom-radio-example-bar">
+            Radio bar
+        </label>
+    </div>
+
+    <div class="mb-3">
+        <input type="radio" name="example-radio-disabled" value="" id="custom-radio-example-disabled-checked" checked disabled>
+        <label for="custom-radio-example-disabled-checked">
+            Disabled radio checked
+        </label>
+    </div>
+
+    <div class="mb-3">
+        <input type="radio" name="example-radio-disabled" value="" id="custom-radio-example-disabled" disabled>
+        <label for="custom-radio-example-disabled">
+            Disabled radio
+        </label>
+    </div>
+
+    <div class="tailstart-separator">Link</div>
+
+    <!-- Link -->
+
+    <div class="mb-3">
+        <a href="#" class="btn">Button</a>
+    </div>
+
+    <div class="mb-3">
+        <a href="mailto:example@example.com" class="btn">Send an Email</a>
+    </div>
+
+    <div class="mb-3">
+        <a href="#" class="btn disabled">Button disabled</a>
+    </div>
+
+    <div class="mb-3">
+        <a href="mailto:example@example.com" class="btn disabled">Send an Email disabled</a>
+    </div>
+
+
+    <div class="tailstart-separator">Button</div>
+
+    <!-- Button -->
+    <div class="mb-3">
+        <button type="button" class="btn">Button</button>
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn">Submit</button>
+    </div>
+
+    <div class="mb-3">
+        <button type="button" class="btn" disabled>Button disabled</button>
+    </div>
+
+    <div class="mb-3">
+        <button type="submit" class="btn" disabled>Submit disabled</button>
+    </div>
+
+    <div class="tailstart-separator"></div>
+</div>
+</body>
+</html>
