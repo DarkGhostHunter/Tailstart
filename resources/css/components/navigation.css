@@ -1,6 +1,6 @@
 @layer components {
     .nav {
-        @apply inline-block border rounded shadow;
+        @apply inline-block border rounded;
 
         &.nav-portrait > ul {
             @apply flex-col divide-x-0 divide-y;

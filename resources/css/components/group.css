@@ -1,5 +1,30 @@
 @layer components {
     .input-group {
+        @apply flex items-stretch;
 
+        & > *, & > input {
+            @apply block flex items-center px-3 rounded-r-none rounded-l-none
+                    border-r border-t border-b border-l-0;
+
+            &:first-child {
+                @apply border rounded-l rounded-r-none;
+            }
+
+            &:last-child {
+                @apply border-t border-l-0 border-b border-r rounded-r rounded-l-none;
+            }
+        }
+
+        & > input[type="file"] {
+            @apply px-0 overflow-hidden;
+        }
+
+        & > label {
+            @apply flex-row gap-x-2;
+        }
+
+        &.disabled {
+            @apply text-gray-400;
+        }
     }
 }

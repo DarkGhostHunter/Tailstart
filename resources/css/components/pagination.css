@@ -1,6 +1,6 @@
 @layer components {
     .pagination {
-        @apply inline-block border rounded shadow;
+        @apply inline-block border rounded;
 
         & > ul {
             @apply flex flex-row divide-x;

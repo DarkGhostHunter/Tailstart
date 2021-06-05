@@ -1,6 +1,6 @@
 @layer components {
     .card {
-        @apply flex flex-col border rounded shadow-sm divide-y;
+        @apply flex flex-col border rounded divide-y;
 
         & .card-body, & .card-header, & .card-footer {
             @apply px-3 py-2;

@@ -1,6 +1,6 @@
 @layer components {
     .list-group {
-        @apply relative flex-row border rounded shadow divide-y;
+        @apply relative flex-row border rounded divide-y;
 
         & > * {
             @apply block px-3 py-2;

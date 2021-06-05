@@ -20,7 +20,7 @@
      * hidden navigation.
      */
     #app-header {
-        @apply border rounded shadow container mx-auto flex flex-row justify-between items-center;
+        @apply border rounded container mx-auto flex flex-row justify-between items-center;
 
         & > nav {
             @apply hidden lg:flex flex-row content-center gap-x-4;

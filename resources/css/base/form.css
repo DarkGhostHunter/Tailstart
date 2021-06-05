@@ -14,14 +14,14 @@
     select,
     textarea
     {
-        @apply block border py-1 px-2 rounded shadow;
+        @apply block border py-1 px-2 rounded;
 
         &[readonly] {
-            @apply cursor-default shadow-none;
+            @apply cursor-default;
         }
 
         &[disabled] {
-            @apply bg-gray-100 shadow-none text-gray-400;
+            @apply bg-gray-100 text-gray-400;
         }
 
         &.form-inline {
@@ -50,6 +50,10 @@
             clear: both;
             content: "";
         }
+    }
+
+    input[type="file"] {
+        @apply cursor-pointer;
     }
 }
 

@@ -1,6 +1,6 @@
 @layer components {
     .alert {
-        @apply relative px-3 py-2 mb-2 border rounded shadow-sm;
+        @apply relative px-3 py-2 mb-2 border rounded;
 
         & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
             @apply pb-3 text-xl border-b;

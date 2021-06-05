@@ -1,5 +1,6 @@
 module.exports = {
     mode: 'jit',
+    darkMode: 'class',
     purge: {
         mode: 'all',
         content: [

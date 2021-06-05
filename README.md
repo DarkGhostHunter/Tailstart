@@ -99,14 +99,15 @@ If you're developing a [Laravel application](https://laravel.com/), you may want
 
 - [x] Better toolchain for developing and compiling (Laravel Mix) (0.7)
 - [x] Base - Multimedia HTML (video, audio, embed) (0.8)
-- [ ] Javascript - Accordion (0.9.0)
-- [ ] Javascript - Dropdown (0.9.1)
-- [ ] Javascript - Notification (0.9.2)
-- [ ] Javascript - Modal (0.9.3)
-- [ ] Javascript - Tooltip (0.9.4)
-- [ ] Javascript - Popover (0.9.5)
-- [ ] Javascript - Off-canvas (0.9.6)
-- [ ] Javascript - Tab (0.9.7)
+- [x] Javascript - Dark Mode (0.9.0)
+- [ ] Javascript - Accordion (0.9.1)
+- [ ] Javascript - Dropdown (0.9.2)
+- [ ] Javascript - Notification (0.9.3)
+- [ ] Javascript - Modal (0.9.4)
+- [ ] Javascript - Tooltip (0.9.5)
+- [ ] Javascript - Popover (0.9.6)
+- [ ] Javascript - Off-canvas (0.9.7)
+- [ ] Javascript - Tab (0.9.8)
 - [ ] Javascript tests (1.0.0)
 
 ## License
