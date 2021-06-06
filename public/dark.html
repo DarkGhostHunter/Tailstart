@@ -6,6 +6,7 @@
     <meta name="description" content="HTML files ready to style with Tailwind CSS.">
     <link href="tailstart/css/tailstart.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
+    <script src="js/app.js"></script>
     <title>Tailstrap - Dark Mode</title>
 </head>
 <body>
@@ -26,102 +27,27 @@
 
     <div class="tailstart-separator">Switch</div>
 
-    <!-- Switch -->
+    <script src="./js/util/dark.js"></script>
     <script>
-        /**
-         * Start by setting the color scheme as Light.
-         *
-         * @type {string}
-         */
-        let colorScheme = 'light';
-
-        /**
-         * Prepares the document to detect the current dark mode configuration.
-         *
-         * Run this only once.
-         *
-         * @return void
-         */
-        function detectDarkMode() {
-            retrieveSchemeFromBrowser();
-
-            // Detect changes to this mode by the browser and update it.
-            window.matchMedia('(prefers-color-scheme: dark)')
-                .addEventListener('change', e => colorScheme = e.matches ? 'dark' : 'light')
-
-            // Now, check if there is a local storage variable for dark theme.
-            // If it exists, it will take precedence over any automatic preference.
-            colorScheme = window.localStorage.getItem('colorScheme') ?? colorScheme;
-
-            applyDarkMode();
-        }
-
-        /**
-         * Sets the scheme from the browser.
-         *
-         * @return void
-         */
-        function retrieveSchemeFromBrowser() {
-            colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-        }
-
-        /**
-         * Toggles and overrides the color scheme preference.
-         *
-         * @return void
-         */
-        function toggleDarkMode() {
-            colorScheme = colorScheme === 'light' ? 'dark' : 'light'
-            window.localStorage.setItem('colorScheme', colorScheme)
-            applyDarkMode();
-        }
-
-        /**
-         * Resets the scheme preference back to the browser.
-         *
-         * @return void
-         */
-        function defaultDarkMode() {
-            window.localStorage.removeItem('colorScheme')
-            retrieveSchemeFromBrowser()
-            applyDarkMode()
-        }
-
-        /**
-         * Applies dark mode to the document.
-         *
-         * @return void
-         */
-        function applyDarkMode() {
-            let classList = document.documentElement.classList;
-
-            // Once done, we will the add or remove the "dark" class to the document.
-            if (colorScheme === 'dark') {
-                classList.add('dark')
-            } else {
-                classList.remove('dark')
-            }
-        }
-
-        detectDarkMode();
+        DarkMode.detectDarkMode()
     </script>
 
     <div class="rounded px-4 py-3 dark:bg-gray-900 dark:text-gray-300 flex flex-row gap-x-4">
-        <button class="dark:hidden" type="button" onclick="toggleDarkMode()">
+        <button class="dark:hidden" type="button" onclick="DarkMode.toggleDarkMode()">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
             </svg>
             Toggle Dark
         </button>
 
-        <button class="hidden dark:block" type="button" onclick="toggleDarkMode()">
+        <button class="hidden dark:block" type="button" onclick="DarkMode.toggleDarkMode()">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
             </svg>
             Toggle Light
         </button>
 
-        <button type="button" onclick="defaultDarkMode()">
+        <button type="button" onclick="DarkMode.defaultDarkMode()">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
             </svg>

@@ -13,6 +13,12 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css');
 
 //
+// Use the utilities for your app and require them as needed, or bundle them.
+//
+mix.copy('resources/js/utilities', 'public/js/util');
+// mix.js('resources/js/utilities/**/*.*js', 'public/js/util.js')
+
+//
 // Simple config that tells BrowserSync to serve static files and watch for changes.
 //
 // BrowserSync will automatically inject the changes styles into your browser.
