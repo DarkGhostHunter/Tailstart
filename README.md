@@ -61,13 +61,15 @@ The advantage of using vanilla Tailwind CSS over HTML is a very small CSS final 
 the framework itself by reading files like PHP, HTML or JS. With the JIT engine, wasting hours configuring the variants
 needed (like `hover:focus:md` and so on) it's unnecessary.
 
+That being said, if you're creating a Javascript app around components, Component Extraction won't be as useful.
+
 | Component Extraction | HTML CSS Classes
 |---|---|
 | `<div class="accordeon">` | `<div class="border rounded shadow...">` |
 | Requires Bundler | Works with Bundler or from a CDN |
 | Simplifies multiple classes into one | Requires repeating the classes, over and over again |
 | Final output takes may take a dozen of KB | PurgeCSS and CSSnano outputs generate very small builds |
-| Good for Server-Side rendering (Node.js, PHP, Ruby, Python, etc) | Good for Client-Side rendering (Javascript)
+| Good for Server-Side rendering | Good for Client-Side rendering (Javascript)
 
 As a comparison, **Bootstrap 5 generates a minified 150~ KB stylesheet**.
 
@@ -109,7 +111,7 @@ Instead of reinventing the wheel, Tailstart uses [Bootstrap 5's ESM-enabled Java
 
 You can check how Tailstart enables everything at once in the [`app.js`](resources/js/app.js) file.
 
-In the meantime, see this example of using a modal with Bootstrap with Vue.
+In the meantime, see this example of using a modal with Bootstrap with Vue 3:
 
 ```vue
 <template>
@@ -150,7 +152,7 @@ directory into your project, and install the [dev-dependencies](package.json) of
 - [x] Javascript - Accordion (0.9.2)
 - [x] Javascript - Collapsible (0.9.3)
 - [ ] Javascript - Dropdown (0.9.4)
-- [ ] Javascript - Notification (0.9.5)
+- [x] Javascript - Notification (0.9.5)
 - [ ] Javascript - Modal (0.9.6)
 - [ ] Javascript - Tooltip (0.9.7)
 - [ ] Javascript - Popover (0.9.8)

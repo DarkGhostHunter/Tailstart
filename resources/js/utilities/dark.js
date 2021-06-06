@@ -49,12 +49,14 @@ export default class
         } else {
             this.#setSchemeFromBrowser();
         }
+
+        // Detect changes to this mode by the browser and update it.
         if (! this.#listenerAdded) {
-            // Detect changes to this mode by the browser and update it.
             this.#getMedia().addEventListener('change', e => {
                 this.#isDark = e.matches
                 this.#applyScheme();
             })
+
             this.#listenerAdded = true;
         }
 

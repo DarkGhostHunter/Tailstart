@@ -29,6 +29,10 @@
         }
     }
 
+    select, label, input[type="checkbox"], input[type="radio"] {
+        @apply cursor-pointer;
+    }
+
     input[type="color"] {
         @apply p-0;
     }
@@ -58,6 +62,11 @@
 }
 
 @layer components {
+
+    .form-control:focus, .form-control:active {
+        @apply outline-none ring-4 ring-blue-300;
+    }
+
     select:not([multiple]).form-control {
         @apply bg-no-repeat bg-right pr-6;
         appearance: none;

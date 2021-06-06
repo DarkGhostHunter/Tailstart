@@ -2,6 +2,14 @@
   "name": "tailstart",
   "description": "Components ready to style with Tailwind CSS",
   "version": "0.9.3",
+  "license": "MIT",
+  "repository": "https://github.com/darkghosthunter/tailstart.git",
+  "bugs": "https://github.com/darkghosthunter/tailstart/issues",
+  "homepage": "https://github.com/darkghosthunter/tailstart",
+  "author": {
+    "email": "darkghosthunter@gmail.com",
+    "name": "Italo Israel Baeza Cabrera"
+  },
   "scripts": {
     "dev": "npm run development",
     "development": "mix",

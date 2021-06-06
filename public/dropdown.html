@@ -1,10 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML files ready to style with Tailwind CSS.">
+    <link href="tailstart/css/tailstart.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <script src="js/app.js"></script>
+    <title>Tailstrap - Alerts</title>
 </head>
 <body>
 
+<div class="tailstart-html-header">
+    <div class="tailstart-container">
+        <a href="index.html" target="_self">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z"/>
+            </svg>
+            Go Back
+        </a>
+    </div>
+</div>
+
+<div class="tailstart-container">
+
+    <div class="tailstart-separator">Dropdown</div>
+
+    <!-- Dropdown -->
+
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+    </div>
+
+    <div class="tailstart-separator">Directional Dropdowns</div>
+
+    <!-- Directional Dropdowns -->
+
+    <div class="flex flex-row gap-x-4">
+        <div class="dropup">
+            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropup
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+
+        <div class="dropend">
+            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropright
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+
+        <div class="dropstart">
+            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropstart
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tailstart-separator">Dropdown menu</div>
+
+    <!-- Dropdown menu -->
+
+    <div>
+        <div class="dropup">
+            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">Link action</a></li>
+                <li><span class="dropdown-item-text">Item text</span></li>
+                <li><a class="dropdown-item disabled" href="#">Link action disabled</a></li>
+                <li><a class="dropdown-item active" href="#">Active link action</a></li>
+                <li><button class="dropdown-item" type="button">Button action</button></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Another link action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><h6 class="dropdown-header">Dropdown header</h6></li>
+                <li><a class="dropdown-item" href="#">Another link action</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tailstart-separator"></div>
+
+</div>
 </body>
 </html>

@@ -13,7 +13,7 @@
 
     .mm-player {
         & .mm-title {
-            @apply px-3 py-2 bg-gray-50 rounded-t;
+            @apply px-3 py-2 bg-gray-50 rounded-t mb-0 text-base;
         }
 
         & > audio {
@@ -21,25 +21,29 @@
         }
 
         & > video {
-            @apply -mt-2 w-full h-auto rounded-b;
+            @apply w-full h-auto rounded-b;
         }
 
         & > .mm-controls {
-            @apply flex flex-row place-items-center gap-x-2 px-3 py-2;
+            @apply flex flex-col place-items-center gap-x-2 gap-y-2 px-3 py-2;
 
-            & > .mm-progress {
+            & > .mm-buttons {
+                @apply w-full flex flex-row justify-between items-center;
+            }
+
+            & .mm-time {
+                @apply text-gray-500 text-xs;
+            }
+
+            & .mm-progress {
                 @apply flex flex-row flex-wrap justify-between w-full;
-
-                & > .mm-current, & > .mm-duration {
-                    @apply text-gray-500 text-sm;
-                }
             }
 
             & .mm-play:not([hidden]),
             & .mm-pause:not([hidden]),
             & .mm-mute:not([hidden]),
             & .mm-unmute:not([hidden]) {
-                @apply block text-gray-500;
+                @apply inline-block text-gray-500;
 
                 &:hover, &:focus {
                     @apply text-blue-400 stroke-current;
@@ -59,7 +63,7 @@
             @apply relative;
 
             & .mm-controls {
-                @apply absolute bottom-0 w-full bg-white opacity-80 rounded-b;
+                @apply absolute w-full bottom-0 bg-white rounded-b border-0;
             }
         }
     }

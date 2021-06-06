@@ -1,3 +1,21 @@
 @layer components {
+    .dropdown-menu {
+        @apply hidden absolute bg-white rounded border py-2 shadow;
 
+        &.show {
+            @apply block;
+        }
+
+        & .dropdown-item, & .dropdown-item-text, & .dropdown-header {
+            @apply block px-4 py-2;
+        }
+
+        & .dropdown-header {
+            @apply text-gray-500 text-sm my-0;
+        }
+
+        & .dropdown-divider {
+            @apply my-2;
+        }
+    }
 }

@@ -1,13 +1,13 @@
 @layer components {
     .btn {
-        @apply border rounded inline-block border-gray-300 px-3 py-2;
+        @apply border rounded inline-block border-gray-300 px-3 py-2 outline-none transition-all;
 
         &.disabled, &[disabled] {
             @apply pointer-events-none cursor-not-allowed shadow-none opacity-90;
         }
 
         &:hover, &:focus {
-            @apply ring ring-gray-200;
+            @apply outline-none ring-4 ring-gray-200;
         }
 
         &.btn-sm {

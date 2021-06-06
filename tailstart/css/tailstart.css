@@ -50,7 +50,6 @@
     @apply bg-indigo-50;
 
     & .tailstart-container {
-        @apply transition-all;
 
         & section {
             @apply mb-20;
