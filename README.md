@@ -12,7 +12,7 @@ This is useful when you need a visual guidelines to implement from the very base
 
 ## Installation
 
-Simple call your Node.js package manager of choice, like `npm`:
+Simple clone this repository with `git`, and call your Node.js package manager of choice, like `npm`.
 
     git clone https://github.com/DarkGhostHunter/Tailstart.git my-new-project
     rm my-new-project/.git
@@ -32,34 +32,44 @@ To start developing, just call `npm mix`:
     $> npm mix
     
         Laravel Mix v6.0
-        ┌──────────────────────────────────────┬───────────┐
-        │                                 File │ Size      │
-        ├──────────────────────────────────────┼───────────┤
-        │                    /public/js/app.js │ 188 bytes │
-        │    /public/tailstart/js/tailstart.js │ 6.92 KiB  │
-        │                   public/css/app.css │ 64.7 KiB  │
-        │   public/tailstart/css/tailstart.css │ 16.9 KiB  │
-        └──────────────────────────────────────┴───────────┘
+        ┌─────────────────────────────────────┬───────────┐
+        │                                File │ Size      │
+        ├─────────────────────────────────────┼───────────┤
+        │                    public/js/app.js │ 188 bytes │
+        │    public/tailstart/js/tailstart.js │ 6.92 KiB  │
+        │                  public/css/app.css │ 64.7 KiB  │
+        │  public/tailstart/css/tailstart.css │ 16.9 KiB  │
+        └─────────────────────────────────────┴───────────┘
 
-This will run a [local BrowserSync server](http://localhost:3000/), with all the HTML pieces to style and their description.
+This will run a [local BrowserSync server](http://localhost:3000/), with all the HTML pieces to style and their
+description. You can even check and sync the result across multiple devices!
 
 ![img.png](index.png)
 
-Simply head to the `resources/css` directory and start editing each file. Almost all stylesheets have some minor guidelines you can follow along, or remove them and start from scratch.
+Simply head to the `resources/css` directory and start editing each file. Almost all stylesheets have some minor
+guidelines you can follow along.
 
 ![img_1.png](css.png)
 
-> For further documentation on how to configure Laravel Mix, [refer to the official documentation](https://laravel-mix.com/).
+> To further configure Laravel Mix, [refer to the official documentation](https://laravel-mix.com/).
 
-## Component Extraction vs Vanilla Tailwind CSS
+## Component Extraction vs HTML CSS Classes
 
-> TL;DR: If you need the smallest CSS output for production, Component Extraction won't be your friend. 
+> TL;DR: If you need the smallest CSS output for production, Component Extraction won't be your friend.
 
-The advantage of using vanilla Tailwind CSS over HTML is a very small CSS final build, as it will purge unused CSS from the framework itself by reading files like PHP, HTML or JS. With the JIT engine, wasting hours configuring the variants needed (like `hover:focus:md` and so on) it's unnecessary.
+The advantage of using vanilla Tailwind CSS over HTML is a very small CSS final build, as it will purge unused CSS from
+the framework itself by reading files like PHP, HTML or JS. With the JIT engine, wasting hours configuring the variants
+needed (like `hover:focus:md` and so on) it's unnecessary.
 
-The problem of this, you will need to repeat the same syntax on each HTML component every time you use. That shouldn't be a problem if you're developing a Javascript application, or a small PHP application with few components.
+| Component Extraction | HTML CSS Classes
+|---|---|
+| `<div class="accordeon">` | `<div class="border rounded shadow...">` |
+| Requires Bundler | Works with Bundler or from a CDN |
+| Simplifies multiple classes into one | Requires repeating the classes, over and over again |
+| Final output takes may take a dozen of KB | PurgeCSS and CSSnano outputs generate very small builds |
+| Good for Server-Side rendering (Node.js, PHP, Ruby, Python, etc) | Good for Client-Side rendering (Javascript)
 
-Component Extraction means to copy the CSS classes properties into personalized classes. For huge applications, this simplifies multiple CSS classes in HTML to just one, while leaving room for other utilities to micro-adjust. The problem is that your CSS files will add up as more classes are used. As a comparison, **Bootstrap 5 generates a minified 150 KB stylesheet**.
+As a comparison, **Bootstrap 5 generates a minified 150~ KB stylesheet**.
 
 ## Out-of-the-box experience
 
@@ -69,7 +79,7 @@ This package includes:
 - PostCSS Preset Environment
 - PostCSS Nesting
 - PostCSS Imports
-- Live updates on styles. 
+- Live updates on styles.
 
 This will allow you to do things like this, and see changes automatically in the browser.
 
@@ -79,7 +89,7 @@ This will allow you to do things like this, and see changes automatically in the
 @layer components {
     .profile {
         @apply border-2 w-full text-yellow-800;
-        
+
         & > .img {
             @apply rounded-t;
         }
@@ -89,26 +99,63 @@ This will allow you to do things like this, and see changes automatically in the
 
 If you need more PostCSS plugins, just head out to this [PostCSS section](https://www.postcss.parts/).
 
+## Javascript components
+
+Instead of reinventing the wheel, Tailstart uses [Bootstrap 5's ESM-enabled Javascript](https://getbootstrap.com/docs/5.0/getting-started/javascript/#using-bootstrap-as-a-module):
+
+- You get all Bootstrap 5 well-thought behaviour.
+- It makes your frontend compatible if you're switching from Bootstrap.
+- It's compatible with Vue, React, Angular and what else.
+
+You can check how Tailstart enables everything at once in the [`app.js`](resources/js/app.js) file.
+
+In the meantime, see this example of using a modal with Bootstrap with Vue.
+
+```vue
+<template>
+  <button type="button" class="btn btn-blue" @click="modal.show()">
+    Launch demo modal
+  </button>
+  <div class="modal fade" ref="bootstrapModal" tabindex="-1" aria-hidden="true">
+    <!-- ... -->
+  </div>
+</template>
+
+<script>
+import { Modal } from 'bootstrap'
+
+export default {
+    data: () => ({
+        modal: null
+    }),
+    mounted() {
+        this.modal = new Modal(this.$refs.bootstrapModal)
+    }
+};
+</script>
+```
+
 ## Building
 
 Call `mix production`, and you should see the final output in your `public/css` and `public/js` folders.
 
-If you're developing a [Laravel application](https://laravel.com/), you may want to just copy-paste the `resources/` directory into your project.
+If you're developing a [Laravel application](https://laravel.com/), you may want to just copy-paste the `resources/`
+directory into your project, and install the [dev-dependencies](package.json) of this package.
 
 ## Road to v1.0
 
 - [x] Better toolchain for developing and compiling (Laravel Mix) (0.7)
 - [x] Base - Multimedia HTML (video, audio, embed) (0.8)
 - [x] Javascript - Dark Mode (0.9.0)
-- [ ] Javascript - Accordion (0.9.1)
-- [ ] Javascript - Dropdown (0.9.2)
-- [ ] Javascript - Notification (0.9.3)
-- [ ] Javascript - Modal (0.9.4)
-- [ ] Javascript - Tooltip (0.9.5)
-- [ ] Javascript - Popover (0.9.6)
-- [ ] Javascript - Off-canvas (0.9.7)
-- [ ] Javascript - Tab (0.9.8)
-- [ ] Javascript tests (1.0.0)
+- [x] Javascript - Accordion (0.9.2)
+- [x] Javascript - Collapsible (0.9.3)
+- [ ] Javascript - Dropdown (0.9.4)
+- [ ] Javascript - Notification (0.9.5)
+- [ ] Javascript - Modal (0.9.6)
+- [ ] Javascript - Tooltip (0.9.7)
+- [ ] Javascript - Popover (0.9.8)
+- [ ] Javascript - Off-canvas (0.9.9)
+- [ ] Javascript - Tab (0.9.10)
 
 ## License
 

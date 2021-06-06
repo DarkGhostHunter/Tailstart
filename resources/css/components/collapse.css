@@ -1,0 +1,18 @@
+@layer components {
+    .collapse {
+        @apply h-0;
+
+        &:not(.show) {
+            @apply hidden;
+        }
+
+        &.show {
+            @apply block h-auto;
+        }
+    }
+
+    /* purgecss ignore */
+    .collapsing {
+        @apply transition-all h-0 overflow-hidden duration-300 ease-out;
+    }
+}

@@ -1,3 +1,47 @@
 @layer components {
+    .accordion {
+        @apply flex flex-col;
 
+        & .accordion-item {
+            @apply border-l border-r;
+
+            &:first-child {
+                @apply rounded-t border-t;
+            }
+
+            &:last-child {
+                @apply rounded-b border-b;
+
+                & .accordion-header {
+                    @apply border-b-0;
+                }
+
+                & .accordion-body {
+                    @apply border-b-0 border-t;
+                }
+            }
+
+            & .accordion-header {
+                & .accordion-button {
+                    @apply w-full text-left px-3 py-2;
+
+                    &:not(.collapsed) {
+                        @apply text-blue-500;
+                    }
+                }
+            }
+
+            & .accordion-body {
+                @apply px-3 py-2;
+            }
+
+            & .accordion-body {
+                @apply border-b;
+            }
+
+            & .accordion-header {
+                @apply text-xl border-b mb-0;
+            }
+        }
+    }
 }

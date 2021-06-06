@@ -1,31 +1,75 @@
-class DarkMode
+export default class
 {
     /**
-     * Setting the color scheme as Light
+     * Checks if the dark mode has been already listenerAdded or not.
      *
-     * @type {string}
+     * @type {boolean}
      */
-    static #scheme = 'light';
+    static #listenerAdded = false;
+
+    /**
+     * If the current color scheme is dark or not.
+     *
+     * @type boolean
+     */
+    static #isDark = false;
+
+    /**
+     * Checks if the current color scheme is dark.
+     *
+     * @return {boolean}
+     */
+    static isDark() {
+        return this.#isDark
+    }
+
+    /**
+     * Checks if the current color scheme is light.
+     *
+     * @return {boolean}
+     */
+    static isLight() {
+        return !this.isDark()
+    }
 
     /**
      * Prepares the document to detect the current dark mode configuration.
      *
-     * Run this only once.
+     * This is idempotent thanks to the "listenerAdded" variable.
      *
-     * @return void
+     * @return this
      */
-    static detectDarkMode() {
-        this.#retrieveSchemeFromBrowser();
+    static detect() {
 
-        // Detect changes to this mode by the browser and update it.
-        window.matchMedia('(prefers-color-scheme: dark)')
-            .addEventListener('change', e => this.#scheme = e.matches ? 'dark' : 'light')
+        let preference = window.localStorage.getItem('colorScheme');
 
-        // Now, check if there is a local storage variable for dark theme.
-        // If it exists, it will take precedence over any automatic preference.
-        this.#scheme = window.localStorage.getItem('colorScheme') ?? this.#scheme;
+        // If there is no local preference, proceed to the the browser preference.
+        if (preference) {
+            this.#isDark = preference === 'dark'
+        } else {
+            this.#setSchemeFromBrowser();
+        }
+        if (! this.#listenerAdded) {
+            // Detect changes to this mode by the browser and update it.
+            this.#getMedia().addEventListener('change', e => {
+                this.#isDark = e.matches
+                this.#applyScheme();
+            })
+            this.#listenerAdded = true;
+        }
 
-        this.#applyDarkMode();
+        this.#applyScheme();
+
+        return this;
+    }
+
+    /**
+     * Returns the Media Query for color scheme.
+     *
+     * @return {MediaQueryList}
+     */
+    static #getMedia() {
+        return window.matchMedia('(prefers-color-scheme: dark)');
     }
 
     /**
@@ -33,8 +77,8 @@ class DarkMode
      *
      * @return void
      */
-    static #retrieveSchemeFromBrowser() {
-        this.#scheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    static #setSchemeFromBrowser() {
+        this.#isDark = this.#getMedia().matches
     }
 
     /**
@@ -42,10 +86,34 @@ class DarkMode
      *
      * @return void
      */
-    static toggleDarkMode() {
-        this.#scheme = this.scheme === 'light' ? 'dark' : 'light'
-        window.localStorage.setItem('colorScheme', this.#scheme)
-        this.#applyDarkMode();
+    static toggle() {
+        if (this.isLight()) {
+            this.dark()
+        } else {
+            this.light()
+        }
+    }
+
+    /**
+     * Sets the scheme to dark.
+     *
+     * @return void
+     */
+    static dark() {
+        window.localStorage.setItem('colorScheme', 'dark')
+        this.#isDark = true;
+        this.#applyScheme();
+    }
+
+    /**
+     * Sets the scheme to light.
+     *
+     * @return void
+     */
+    static light() {
+        window.localStorage.setItem('colorScheme', 'light')
+        this.#isDark = false;
+        this.#applyScheme();
     }
 
     /**
@@ -53,10 +121,10 @@ class DarkMode
      *
      * @return void
      */
-    static defaultDarkMode() {
+    static original() {
         window.localStorage.removeItem('colorScheme')
-        this.#retrieveSchemeFromBrowser()
-        this.#applyDarkMode()
+        this.#setSchemeFromBrowser()
+        this.#applyScheme()
     }
 
     /**
@@ -64,14 +132,12 @@ class DarkMode
      *
      * @return void
      */
-    static #applyDarkMode() {
-        let classList = document.documentElement.classList;
-
+    static #applyScheme() {
         // Once done, we will the add or remove the "dark" class to the document.
-        if (this.#scheme === 'dark') {
-            classList.add('dark')
+        if (this.isDark()) {
+            window.document.documentElement.classList.add('dark')
         } else {
-            classList.remove('dark')
+            window.document.documentElement.classList.remove('dark')
         }
     }
 }
