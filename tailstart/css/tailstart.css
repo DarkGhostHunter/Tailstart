@@ -183,14 +183,10 @@
     @apply relative;
 
     & .modal {
-        @apply py-6;
+        @apply py-6 w-screen;
     }
 
     & .modal, & .modal-dialog {
         @apply block relative;
-    }
-
-    & .modal-backdrop {
-        @apply absolute w-full h-full;
     }
 }
