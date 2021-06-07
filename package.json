@@ -1,7 +1,7 @@
 {
   "name": "tailstart",
   "description": "Components ready to style with Tailwind CSS",
-  "version": "0.9.3",
+  "version": "0.9.6",
   "license": "MIT",
   "repository": "https://github.com/darkghosthunter/tailstart.git",
   "bugs": "https://github.com/darkghosthunter/tailstart/issues",

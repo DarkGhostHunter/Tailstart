@@ -178,3 +178,19 @@
         }
     }
 }
+
+.tailstart-modal-example {
+    @apply relative;
+
+    & .modal {
+        @apply py-6;
+    }
+
+    & .modal, & .modal-dialog {
+        @apply block relative;
+    }
+
+    & .modal-backdrop {
+        @apply absolute w-full h-full;
+    }
+}

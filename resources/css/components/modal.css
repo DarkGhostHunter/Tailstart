@@ -1,3 +1,51 @@
 @layer components {
+    .modal {
+        @apply flex-col place-items-center;
+        @apply fixed inset-0 z-30 overflow-x-hidden overflow-y-auto outline-none;
+        @apply hidden;
 
+        & .modal-dialog {
+            @apply transition duration-500 transform-gpu opacity-0 -translate-y-6;
+            @apply w-auto sm:max-w-[70%] md:max-w-[50%] lg:max-w-[500px] mx-2 sm:mx-auto mt-2 md:mt-8;
+            @apply border bg-white rounded;
+
+            & .modal-header, & .modal-body, & .modal-footer {
+                @apply mb-0 py-2 px-3;
+            }
+
+            & .modal-header, & .modal-body {
+                @apply border-b;
+            }
+
+            & .modal-header {
+                @apply flex flex-row items-center justify-between text-lg;
+
+                & h1, & h2, & h3, & h4, & h5, & h6 {
+                    @apply mb-0;
+                }
+
+                & .btn-close {
+                    &:hover {
+                        @apply text-red-500;
+                    }
+                }
+            }
+        }
+
+        &.fade {
+            @apply transition-all;
+        }
+
+        &.show .modal-dialog {
+            @apply block opacity-100 translate-y-0;
+        }
+    }
+
+    .modal-backdrop {
+        @apply fixed transition-all bg-black z-20 inset-0 w-screen h-screen opacity-0;
+
+        &.show {
+            @apply opacity-50;
+        }
+    }
 }

@@ -2,6 +2,7 @@ import DarkMode from "./utilities/dark"
 import Collapse from "bootstrap/js/src/collapse"
 import Alert from "bootstrap/js/src/alert"
 import Dropdown from "bootstrap/js/src/dropdown"
+import Modal from "bootstrap/js/src/modal"
 
 //
 // Enable Dark Mode.
@@ -27,3 +28,10 @@ Array.from(document.getElementsByClassName('alert'))
 //
 Array.from(document.getElementsByClassName('dropdown-toggle'))
     .forEach(element => new Dropdown(element))
+
+//
+// Activate all modals.
+//
+Array.from(document.getElementsByClassName('modal'))
+    .filter(element => element.id) // Filter those who have an ID.
+    .forEach(element => new Modal(element))
