@@ -1,0 +1,18 @@
+@layer components {
+    /**
+     * These leading is basically a header with a subtitle. The first element is
+     * expected to be a heading, while the second can be anything, like a para-
+     * graph, that will be less-black than the typography.
+     */
+    .leading {
+        @apply mb-2;
+
+        & *:first-child {
+            @apply mb-1;
+        }
+
+        & *:last-child {
+            @apply mb-0 font-light text-gray-500;
+        }
+    }
+}

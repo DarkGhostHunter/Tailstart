@@ -1,9 +1,0 @@
-@layer base {
-    em {
-        @apply text-gray-700;
-    }
-
-    strong {
-        @apply text-gray-700;
-    }
-}

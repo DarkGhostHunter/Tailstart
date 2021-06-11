@@ -24,30 +24,115 @@
 
 <div class="tailstart-container">
 
+    <div class="tailstart-separator">Custom checkboxes</div>
+
+    <!-- Switches -->
+
+    <div class="mb-3">
+        <input class="form-control" type="checkbox" value="" id="custom-checkbox-example-foo">
+        <label for="custom-checkbox-example-foo">
+            Checkbox foo
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-control" type="checkbox" value="" id="custom-checkbox-example-bar" checked>
+        <label for="custom-checkbox-example-bar">
+            Checkbox bar
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-control" type="checkbox" value="" id="custom-checkbox-example-disabled-checked" checked disabled>
+        <label for="custom-checkbox-example-disabled-checked">
+            Disabled Checkbox checked
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-control" type="checkbox" value="" id="custom-checkbox-example-disabled" disabled>
+        <label for="custom-checkbox-example-disabled">
+            Disabled Checkbox
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-control" type="checkbox" value="" id="custom-checkbox-indeterminate-example" indeterminate>
+        <label for="custom-checkbox-indeterminate-example">
+            Checkbox indeterminate
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-control" type="checkbox" value="" id="custom-checkbox-indeterminate-checked-example" indeterminate checked>
+        <label for="custom-checkbox-indeterminate-checked-example" checked>
+            Checkbox indeterminate
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-control" type="checkbox" value="" id="custom-checkbox-indeterminate-checked-example-disabled" indeterminate disabled checked>
+        <label for="custom-checkbox-indeterminate-checked-example-disabled">
+            Disabled Checkbox indeterminate checked
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-control" type="checkbox" value="" id="custom-checkbox-indeterminate-example-disabled" indeterminate disabled>
+        <label for="custom-checkbox-indeterminate-example-disabled">
+            Disabled Checkbox indeterminate
+        </label>
+    </div>
+    <div class="tailstart-separator">Custom radio</div>
+
+    <!-- Custom radio -->
+
+    <div class="mb-3">
+        <input class="form-control" type="radio" value="" name="custom-radio-example"
+               id="custom-radio-example-foo">
+        <label for="custom-radio-example-foo">
+            Radio foo
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-control" type="radio" value="" name="custom-radio-example"
+               id="custom-radio-example-bar" checked>
+        <label for="custom-radio-example-bar">
+            Radio bar
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-control" type="radio" value="" name="custom-radio-disabled-example"
+               id="custom-radio-example-disabled-checked" checked disabled>
+        <label for="custom-radio-example-disabled-checked">
+            Disabled Radio checked
+        </label>
+    </div>
+    <div class="mb-3">
+        <input class="form-control" type="radio" value="" name="custom-radio-disabled-example"
+               id="custom-radio-example-disabled" disabled>
+        <label for="custom-radio-example-disabled">
+            Disabled Radio
+        </label>
+    </div>
+
     <div class="tailstart-separator">Switches</div>
 
     <!-- Switches -->
 
-    <div>
-        <input type="checkbox" value="" id="custom-switch-example-foo">
+    <div class="mb-3">
+        <input class="form-control switch" type="checkbox" value="" id="custom-switch-example-foo">
         <label for="custom-switch-example-foo">
             Switch foo
         </label>
     </div>
-    <div>
-        <input type="checkbox" value="" id="custom-switch-example-bar" checked>
+    <div class="mb-3">
+        <input class="form-control switch" type="checkbox" value="" id="custom-switch-example-bar" checked>
         <label for="custom-switch-example-bar">
             Switch bar
         </label>
     </div>
-    <div>
-        <input type="checkbox" value="" id="custom-switch-example-disabled-checked" checked disabled>
+    <div class="mb-3">
+        <input class="form-control switch" type="checkbox" value="" id="custom-switch-example-disabled-checked" checked disabled>
         <label for="custom-switch-example-disabled-checked">
             Disabled switch checked
         </label>
     </div>
-    <div>
-        <input type="checkbox" value="" id="custom-switch-example-disabled" disabled>
+    <div class="mb-3">
+        <input class="form-control switch" type="checkbox" value="" id="custom-switch-example-disabled" disabled>
         <label for="custom-switch-example-disabled">
             Disabled switch
         </label>
@@ -57,17 +142,17 @@
 
     <!-- Color pickers -->
 
-    <div>
+    <div class="mb-3">
         <label for="custom-color-picker">
             Pick a color
-            <input type="color" value="" id="custom-color-picker">
+            <input class="form-control" type="color" value="" id="custom-color-picker">
         </label>
     </div>
 
-    <div>
+    <div class="mb-3">
         <label for="custom-color-picker-disabled">
             Disabled Color picker
-            <input type="color" value="" id="custom-color-picker-disabled" disabled>
+            <input class="form-control" type="color" value="" id="custom-color-picker-disabled" disabled>
         </label>
     </div>
 
@@ -75,47 +160,47 @@
 
     <!-- Date pickers -->
 
-    <div>
-        <label for="example-date">Default file input example</label>
-        <input type="date" id="example-date">
+    <div class="mb-3">
+        <label for="example-date">Default date pickers example</label>
+        <input class="form-control" type="date" id="example-date" value="11/22/2000">
     </div>
 
-    <div>
-        <label for="example-date-disabled">Default file input example</label>
-        <input type="date" id="example-date-disabled" disabled>
+    <div class="mb-3">
+        <label for="example-date-disabled">Default date pickers example</label>
+        <input class="form-control" type="date" id="example-date-disabled" disabled>
     </div>
 
     <div class="tailstart-separator">File upload</div>
 
     <!-- File upload -->
 
-    <div>
+    <div class="mb-3">
         <label for="example-file-upload">Default file input example</label>
-        <input type="file" id="example-file-upload">
+        <input class="form-control" type="file" id="example-file-upload">
     </div>
 
-    <div>
+    <div class="mb-3">
         <label for="example-file-upload-disabled">Default file input example</label>
-        <input type="file" id="example-file-upload-disabled" disabled>
+        <input class="form-control" type="file" id="example-file-upload-disabled" disabled>
     </div>
 
     <div class="tailstart-separator">Range</div>
 
     <!-- Range -->
 
-    <div>
+    <div class="mb-3">
         <label for="example-range">Example range</label>
-        <input type="range" class="form-range" id="example-range">
+        <input class="form-control" type="range" class="form-range" id="example-range">
     </div>
 
-    <div>
+    <div class="mb-3">
         <label for="example-range-disabled">Example range</label>
-        <input type="range" id="example-range-disabled" disabled>
+        <input class="form-control" type="range" id="example-range-disabled" disabled>
     </div>
 
-    <div>
+    <div class="mb-3">
         <label for="example-range-steps">Example range</label>
-        <input type="range" min="0" max="10" id="example-range-steps">
+        <input class="form-control" type="range" min="0" max="10" id="example-range-steps">
     </div>
 
     <div class="tailstart-separator"></div>

@@ -1,82 +1,38 @@
 @layer base {
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="search"],
-    input[type="date"],
-    input[type="datetime-local"],
-    input[type="color"],
-    input[type="month"],
-    input[type="tel"],
-    input[type="week"],
-    input[type="url"],
-    input[type="number"],
+    /**
+     * This is the main block to allow use to easily style all inputs that are
+     * not a form buttons, as these will have their own style through a class.
+     */
+    input:not([type="button"],[type="reset"],[type="submit"],[type="checkbox"],[type="radio"]),
     select,
     textarea
     {
-        @apply block border py-1 px-2 rounded;
+        @apply block border py-1 px-2 bg-white;
 
-        &[readonly] {
-            @apply cursor-default;
+        &::placeholder {
+            @apply text-gray-400;
         }
 
-        &[disabled] {
-            @apply bg-gray-100 text-gray-400;
-        }
-
-        &.form-inline {
-            @apply inline-block;
+        /**
+         * With this we forcefully remove the outline. You will have to add your
+         * own using components, meaning, with the ".btn" or ".form-control" classes.
+         */
+        &:focus, &:hover, &:active {
+            @apply outline-none;
         }
     }
 
-    select, label, input[type="checkbox"], input[type="radio"] {
+    /**
+     * Selects, Checkboxes, Radios, and file uploads should have a pointer cursor.
+     */
+    select, input[type="checkbox"], input[type="radio"], input[type="file"] {
         @apply cursor-pointer;
     }
 
-    input[type="color"] {
-        @apply p-0;
-    }
-
+    /**
+     * We will hide the datalist as it serves as internal HTML reference only.
+     */
     datalist {
         @apply hidden;
-    }
-
-    input[type="range"] {
-        @apply block border bg-gray-100 w-full p-0 h-2 rounded-full my-2 cursor-pointer;
-        appearance: none;
-
-        &:active {
-            @apply bg-blue-100 border-blue-100;
-        }
-
-        &:after {
-            display: block;
-            clear: both;
-            content: "";
-        }
-    }
-
-    input[type="file"] {
-        @apply cursor-pointer;
-    }
-}
-
-@layer components {
-
-    .form-control:focus, .form-control:active {
-        @apply outline-none ring-4 ring-blue-300;
-    }
-
-    select:not([multiple]).form-control {
-        @apply bg-no-repeat bg-right pr-6;
-        appearance: none;
-        background-position: right 0.5rem center;
-        background-size: 1rem 1rem;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")
-    }
-
-    input[list]::-webkit-search-decoration,
-    input[list]::-webkit-calendar-picker-indicator {
-        @apply -mt-2;
     }
 }

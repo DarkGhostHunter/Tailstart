@@ -1,25 +1,62 @@
 @layer components {
+
+    /**
+     * To make a button, use the `btn` class on links or buttons.
+     */
     .btn {
-        @apply border rounded inline-block border-gray-300 px-3 py-2 outline-none transition-all;
+        @apply border rounded inline-block border px-3 py-2 outline-none transition-all ring-gray-200;
 
-        &.disabled, &[disabled] {
-            @apply pointer-events-none cursor-not-allowed shadow-none opacity-90;
+        /**
+         * When the button is disabled via attribute or class, we can create a different style.
+         */
+        &.disabled, &:disabled {
+            @apply relative bg-opacity-50 text-black text-opacity-50 border-opacity-50 pointer-events-none !important;
         }
 
-        &:hover, &:focus {
-            @apply outline-none ring-4 ring-gray-200;
+        /**
+         * We will not add any efect when the button is focused or hovered, but not active.
+         *
+         * When is active, we can change the ring size, but can go wild here.
+         */
+        &:hover:not(:disabled,.disabled,:active), &:focus:not(:disabled,.disabled,:active) {
+            @apply outline-none ring-4;
         }
 
+        &:active {
+            @apply outline-none ring-2;
+        }
+
+        /**
+         * These are just some utilities to handle the size of the buttons.
+         *
+         * Since this is Tailwind CSS, you can adjust the size of the buttons
+         * on media queries, like making the buttons smaller on small screens.
+         */
         &.btn-sm {
             @apply text-sm px-2 py-1;
         }
 
+        &.btn-lg {
+            @apply text-lg px-4 py-3;
+        }
+
+        &.btn-xl {
+            @apply text-xl px-5 py-4;
+        }
+
+        &.btn-2xl {
+            @apply text-2xl px-6 py-5;
+        }
+
+        /**
+         * Here are different colors for each button.
+         */
         &.btn-light {
             @apply text-gray-700 bg-gray-200 border-gray-200 ring-gray-100;
         }
 
         &.btn-dark {
-            @apply text-white bg-gray-700 border-gray-700 ring-gray-200;
+            @apply text-white bg-gray-700 border-gray-700 ring-gray-400;
         }
 
         &.btn-red {

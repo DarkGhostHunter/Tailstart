@@ -4,10 +4,10 @@
         @apply relative;
         @apply cursor-default;
         @apply inline-block px-2 rounded;
-        @apply text-gray-600;
+        @apply typography-gray-600;
         @apply bg-gradient-to-b from-gray-200 to-gray-50;
 
-        text-shadow: 0px 1px 0px theme('colors.gray.50');
+        typography-shadow: 0px 1px 0px theme('colors.gray.50');
         border-top: 1px solid theme('colors.gray.300');
         border-left: 1px solid theme('colors.gray.300');
         border-right: 1px solid theme('colors.gray.300');
@@ -28,7 +28,7 @@
         @apply shadow-sm;
 /*
         @apply inline-block cursor-default px-2 rounded;
-        @apply border border-white bg-gray-50 text-gray-600 bg-gradient-to-b from-gray-100 to-white;
+        @apply border border-white bg-gray-50 typography-gray-600 bg-gradient-to-b from-gray-100 to-white;
         @apply ring-1 ring-gray-300; */
     }
 }

@@ -1,4 +1,3 @@
-@import "typography/basic.css";
-@import "typography/quotes.css";
-@import "typography/keyboard.css";
-@import "typography/code.css";
+@import "typography/headings.css";
+@import "typography/paragraph.css";
+@import "typography/lists.css";

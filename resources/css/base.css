@@ -1,3 +1,12 @@
-@import "base/text.css";
 @import "base/typography.css";
+@import "base/style.css";
+
+/**
+ * This is just a simple non-invasive form resetter.
+ *
+ * While this should suffice for most projects, you may want to use Tailwind CSS
+ * form resetter for more complex scenarios.
+ *
+ * @see https://github.com/tailwindlabs/tailwindcss-forms
+ */
 @import "base/form.css";

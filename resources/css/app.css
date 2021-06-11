@@ -1,7 +1,14 @@
 /**
+ * Font-families
+ *
+ * Here is a great place to add your font-families on development.
+ */
+@import "font.css";
+
+/**
  * Base
  *
- * Resets browser text style and tags behaviour.
+ * Resets browser typography style and tags behaviour.
  */
 @import "tailwindcss/base";
 @import "base.css";

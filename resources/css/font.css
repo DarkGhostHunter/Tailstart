@@ -1,0 +1,17 @@
+/**
+ * This is a place to test different font families without editing all the
+ * HTML files. In production, you may want to use <link> and preload the
+ * fonts, instead of letting the browser wait to fetch it from the CSS.
+ *
+ * After you add your fonts to your project, set the `theme.fontFamily` keys
+ * in your `tailwind.config.js` to point to the correct fonts.
+ *
+ * Alternatively, you can use SnapFont to preview fonts without having to import.
+ *
+ * @see https://getsnapfont.com/
+ * @see https://tailwindcss.com/docs/font-family#customizing
+ */
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&display=swap');
+*/

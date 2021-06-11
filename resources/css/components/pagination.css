@@ -14,7 +14,7 @@
                     }
 
                     & > span {
-                        /** This will allow the text to disappear and make room for the buttons */
+                        /** This will allow the typography to disappear and make room for the buttons */
                         @apply hidden md:inline-block;
                     }
 

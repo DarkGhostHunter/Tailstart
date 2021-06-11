@@ -5,9 +5,9 @@
      * 1. Revert back the style to the lists, and use a "list-unstyled" to strip them down.
      * 2. Keep the lists unstyled, and use a class container to add their style back.
      *
-     * Because it's saner for the option 2, we will use the `text-content` class for that.
+     * Because it's saner for the option 2, we will use the `typography-content` class for that.
      *
-     *     <div class="text-content">
+     *     <div class="typography-content">
      *        <ul>
      *            <li>....
      *        </ul>

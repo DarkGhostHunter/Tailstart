@@ -1,3 +1,113 @@
 @layer components {
+    /**
+     * This styles all the form input with `form-control`, except the checkbox and
+     * radio, as these are not input boxes per-se.
+     */
+    .form-control:not([type="checkbox"], [type="radio"]) {
+        /**
+         * This removes any Safari style, like the defatul inner shadow of inputs.
+         */
+        appearance: none;
 
+        /**
+         * Colors pickers are usally a single block, so we will inline-block them.
+         */
+
+        &:is([type="color"]) {
+            @apply p-0 inline-block;
+        }
+
+        /**
+         * We add a common set of styles to all inputs set as "form-control".
+         */
+        @apply outline-none rounded transition-all ring-0 ring-gray-200 cursor-pointer shadow-none;
+
+        /**
+         * If is form for date or time, we will add some sensitive sizing for iOS.
+         */
+
+        &:is([type="date"], [type="time"]) {
+            @apply min-h-[2em] min-w-[8em];
+        }
+
+        /**
+         * If it's not disabled, we will apply styles on hover, focus and active states.
+         */
+
+        &:not(.disabled, :disabled) {
+            &:hover {
+                @apply ring-4;
+            }
+
+            &:focus, &:active {
+                @apply ring-4 border-blue-400 ring-blue-200;
+            }
+        }
+
+        /**
+         * If it's disabled, we will disable the button and add some "disabled" style.
+         */
+
+        &.disabled, &:disabled {
+            @apply pointer-events-none cursor-default bg-gray-200 text-gray-400;
+
+            &::placeholder {
+                @apply text-gray-300;
+            }
+        }
+
+        /**
+         * This styles the range input exclusively.
+         */
+
+        &:is([type="range"]) {
+            @apply block border bg-gray-100 w-full p-0 h-2 my-2 cursor-pointer;
+        }
+
+        &:active {
+            @apply bg-blue-100 border-blue-100;
+        }
+
+        &:after {
+            @apply block clear-both;
+            content: "";
+        }
+
+        &:focus {
+            &::-webkit-slider-thumb {
+                @apply shadow-sm;
+            }
+
+            &::-moz-range-thumb {
+                @apply shadow-sm;
+            }
+        }
+
+        &::-webkit-calendar-picker-indicator {
+            @apply cursor-pointer;
+            appearance: none;
+            background-position: right 0.5rem center;
+            background-size: 1rem 1rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")
+        }
+    }
+
+    /**
+     * Custom styling for select list that are not multiple.
+     */
+    select:not([multiple]).form-control {
+        @apply bg-no-repeat bg-right pr-6;
+        appearance: none;
+        background-position: right 0.5rem center;
+        background-size: 1rem 1rem;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")
+    }
+
+    /**
+     * This corrects the list arrow down
+     */
+    input[list]::-webkit-search-decoration,
+    input[list]::-webkit-calendar-picker-indicator {
+        @apply -mt-2;
+    }
 }
