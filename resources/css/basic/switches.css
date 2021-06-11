@@ -14,10 +14,8 @@
         /**
          * Here we will lay some common ground for both checkboxes and radios.
          */
-        @apply inline-block relative h-6 w-6 m-0;
-        @apply outline-none;
-        @apply cursor-pointer;
-        @apply bg-transparent border border ring-0 ring-gray-200;
+        @apply inline-block relative h-5 w-5;
+        @apply outline-none cursor-pointer bg-transparent border border ring-0 ring-gray-200;
         @apply transition-all;
 
         /**
@@ -128,9 +126,9 @@
     }
 
     /**
-     * Here is the style of the "switch".
+     * Here is the style of the "switch". These can be checkboxes, or even radio buttons.
      */
-    input[type="checkbox"].form-control.switch {
+    input.form-control.switch {
         /**
          * We will use "box-content" to take into account the border on sizing its height.
          * That will allow our circle to be centered using "em" rather than pixels.

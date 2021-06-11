@@ -5,14 +5,13 @@
      */
     .form-control:not([type="checkbox"], [type="radio"]) {
         /**
-         * This removes any Safari style, like the defatul inner shadow of inputs.
+         * This removes any Safari style, like the default inner shadow of inputs.
          */
         appearance: none;
 
         /**
-         * Colors pickers are usally a single block, so we will inline-block them.
+         * Colors pickers are usually a single block, so we will inline-block them.
          */
-
         &:is([type="color"]) {
             @apply p-0 inline-block;
         }
@@ -25,10 +24,37 @@
         /**
          * If is form for date or time, we will add some sensitive sizing for iOS.
          */
-
-        &:is([type="date"], [type="time"]) {
-            @apply min-h-[2em] min-w-[8em];
+        &::-webkit-date-and-time-value {
+            @apply min-h-[1.5em] cursor-pointer;
         }
+
+        /*
+         * Here we will prepare the calendar and clock icon background.
+         */
+        &:is([type="date"], [type="time"]) {
+            /* This minimum width allows to have the same width across Webkit and Mozilla */
+            @apply min-w-[12em];
+            /* Here we prepare the background positioning of the icon */
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1rem 1rem;
+        }
+
+        &:is([type="date"]) {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' /%3E%3C/svg%3E")
+        }
+
+        &:is([type="time"]) {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E")
+        }
+
+        /*
+         * This hides (but doesn't disables) the calendar icon from the webkit on date/time inputs.
+         */
+        &::-webkit-calendar-picker-indicator {
+            @apply cursor-pointer bg-none;
+        }
+
 
         /**
          * If it's not disabled, we will apply styles on hover, focus and active states.
@@ -82,14 +108,6 @@
                 @apply shadow-sm;
             }
         }
-
-        &::-webkit-calendar-picker-indicator {
-            @apply cursor-pointer;
-            appearance: none;
-            background-position: right 0.5rem center;
-            background-size: 1rem 1rem;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")
-        }
     }
 
     /**
@@ -98,6 +116,7 @@
     select:not([multiple]).form-control {
         @apply bg-no-repeat bg-right pr-6;
         appearance: none;
+        background-repeat: no-repeat;
         background-position: right 0.5rem center;
         background-size: 1rem 1rem;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")
@@ -109,5 +128,14 @@
     input[list]::-webkit-search-decoration,
     input[list]::-webkit-calendar-picker-indicator {
         @apply -mt-2;
+    }
+
+    /**
+     * Finally, we will style the file upload.
+     */
+    .form-control[type="file"] {
+        &::-webkit-file-upload-button {
+            display: none;
+        }
     }
 }
