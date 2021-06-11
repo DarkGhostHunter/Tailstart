@@ -125,17 +125,38 @@
     /**
      * This corrects the list arrow down
      */
-    input[list]::-webkit-search-decoration,
-    input[list]::-webkit-calendar-picker-indicator {
+    input[list].form-control::-webkit-search-decoration,
+    input[list].form-control::-webkit-calendar-picker-indicator {
         @apply -mt-2;
     }
 
     /**
-     * Finally, we will style the file upload.
+     * Finally, we will style the file upload button.
      */
-    .form-control[type="file"] {
-        &::-webkit-file-upload-button {
-            display: none;
+    input[type="file"].form-control {
+        @apply pr-8 pl-0 py-0 min-h-[2em];
+
+        /**
+         * This styles the button.
+         */
+        &::file-selector-button {
+            @apply pointer-events-none;
+            @apply min-h-[2em] pl-8 pr-2 py-1 m-0 mr-2;
+            @apply border-0 rounded-l rounded-r-none;
+            @apply bg-gray-100;
+            border-inline-end-width: 1px;
+            border-inline-end-style: solid;
+            border-inline-end-color: theme('colors.gray.200');
+
+            /* Here we can add a icon just for show */
+            background-repeat: no-repeat;
+            background-position: left 0.5rem center;
+            background-size: 1rem 1rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12' /%3E%3C/svg%3E");
+        }
+
+        &:hover:not(:disabled):not([readonly])::file-selector-button {
+            @apply bg-gray-200;
         }
     }
 }
