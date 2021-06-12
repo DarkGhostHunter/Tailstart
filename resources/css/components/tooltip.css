@@ -2,6 +2,9 @@
     .tooltip {
         @apply absolute block z-40 text-sm break-words opacity-0;
 
+        /**
+         * We need to add this class style so
+         */
         &.fade {
             @apply transition-opacity;
         }
@@ -25,6 +28,8 @@
         & .tooltip-inner {
             @apply px-3 py-2 bg-gray-900 text-center text-gray-50 rounded;
         }
+
+        /* From here we will add the Bootstrap styles needed for different popover directions */
 
         &.bs-tooltip-top {
             @apply pb-2;

@@ -1,3 +1,129 @@
 @layer components {
+    .popover {
+        @apply absolute block z-40 text-sm break-words opacity-0;
 
+        @apply min-w-[12em] bg-clip-padding border rounded break-words;
+
+        &.fade {
+            @apply transition-opacity;
+        }
+
+        &.show {
+            @apply opacity-100;
+        }
+
+        & .popover-arrow {
+            @apply absolute block;
+            @apply w-2 h-2;
+
+            &::before,
+            &::after {
+                @apply absolute border border-solid border-transparent;
+
+                content: '';
+                border-width: theme('spacing.2');
+            }
+        }
+
+        & .popover-header, & .popover-body {
+            @apply p-3 m-0 rounded-t text-sm;
+        }
+
+        & .popover-header {
+            @apply py-1 font-normal text-gray-600 bg-gray-100 border-b;
+
+            &:empty {
+                @apply hidden;
+            }
+        }
+
+        & .popover-body {
+            @apply bg-white rounded-b;
+        }
+
+        /* From here we will add the Bootstrap styles needed for different popover directions */
+
+        &.bs-popover-top {
+            & > .popover-arrow {
+                @apply -bottom-2 w-4;
+
+                &:after {
+                    @apply bottom-0;
+                    border-width: theme('spacing.2') theme('spacing.2') 0;
+                    border-top-color: theme('colors.white');
+                }
+
+                &:before {
+                    @apply -bottom-px;
+                    border-width: theme('spacing.2') theme('spacing.2') 0;
+                    border-top-color: theme('colors.gray.200');
+                }
+            }
+        }
+
+        &.bs-popover-end {
+            & > .popover-arrow {
+                @apply -left-2 h-4;
+
+                &:after {
+                    @apply left-0;
+                    border-width: theme('spacing.2') theme('spacing.2') theme('spacing.2') 0;
+                    border-right-color: theme('colors.white');
+                }
+
+                &:before {
+                    @apply -left-px;
+                    border-width: theme('spacing.2') theme('spacing.2') theme('spacing.2') 0;
+                    border-right-color: theme('colors.gray.200');
+                }
+            }
+        }
+
+        &.bs-popover-bottom {
+            & > .popover-arrow {
+                @apply -top-2 w-4;
+
+                &:after {
+                    @apply top-0;
+                    border-width: 0 theme('spacing.2') theme('spacing.2');
+                    border-bottom-color: theme('colors.white');
+                }
+
+                &:before {
+                    @apply -top-px;
+                    border-width: 0 theme('spacing.2') theme('spacing.2');
+                    border-bottom-color: theme('colors.gray.200');
+                }
+            }
+
+            /**
+             * If there is a header, we will paint the arrow with the header background color.
+             */
+            & .popover-header::before {
+                @apply absolute -top-2 border block w-4 h-2 border-transparent;
+                content: '';
+                left: calc(50% - theme('spacing.2'));
+                border-width: 0 theme('spacing.2') theme('spacing.2');
+                border-bottom-color: theme('colors.gray.100');
+            }
+        }
+
+        &.bs-popover-start {
+            & > .popover-arrow {
+                @apply -right-2 h-4;
+
+                &:after {
+                    @apply right-0;
+                    border-width: theme('spacing.2') 0 theme('spacing.2') theme('spacing.2');
+                    border-left-color: theme('colors.white');
+                }
+
+                &:before {
+                    @apply -right-px;
+                    border-width: theme('spacing.2') 0 theme('spacing.2') theme('spacing.2');
+                    border-left-color: theme('colors.gray.200');
+                }
+            }
+        }
+    }
 }

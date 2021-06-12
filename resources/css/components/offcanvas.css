@@ -1,3 +1,53 @@
 @layer components {
+    .offcanvas {
+        @apply fixed bottom-0 bg-gray-50 px-3 py-2 bg-clip-padding outline-none transform-gpu transition-transform;
+        @apply flex flex-col invisible;
+        @apply z-40;
 
+        /**
+         * If it's showing, we will set reset to zero any transform.
+         */
+        &.show {
+            @apply transform-none;
+        }
+
+        /**
+         * For the width, we will set the width to around 300px to allow an edge on small devices.
+         */
+        &.offcanvas-start, &.offcanvas-end {
+            @apply w-[19em];
+        }
+
+        &.offcanvas-top, &.offcanvas-bottom {
+            @apply h-auto;
+        }
+
+        &.offcanvas-start {
+            @apply top-0 left-0;
+            @apply -translate-x-full;
+        }
+
+        &.offcanvas-end {
+            @apply top-0 right-0;
+            @apply translate-x-full;
+        }
+
+        &.offcanvas-top {
+            @apply top-0 right-0 left-0 bottom-auto;
+            @apply -translate-y-full
+        }
+
+        &.offcanvas-bottom {
+            @apply right-0 left-0;
+            @apply translate-y-full;
+        }
+
+        & .offcanvas-header {
+            @apply flex flex-row items-center justify-between;
+
+            & .offcanvas-title {
+                @apply my-4 text-gray-500 text-lg;
+            }
+        }
+    }
 }

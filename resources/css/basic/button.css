@@ -90,6 +90,14 @@
         }
     }
 
+    .btn-close {
+        @apply inline-block text-gray-500 px-2 py-2 rounded text-base stroke-1 outline-none;
+
+        &:hover, &:focus, &:active {
+            @apply text-red-500 outline-none;
+        }
+    }
+
     .btn-group {
         @apply relative flex flex-row;
 

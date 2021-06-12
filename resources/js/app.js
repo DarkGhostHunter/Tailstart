@@ -4,6 +4,8 @@ import Alert from "bootstrap/js/src/alert"
 import Dropdown from "bootstrap/js/src/dropdown"
 import Modal from "bootstrap/js/src/modal"
 import Tooltip from "bootstrap/js/src/tooltip"
+import Popover from "bootstrap/js/src/popover"
+import Offcanvas from "bootstrap/js/src/offcanvas"
 
 //
 // Enable Dark Mode.
@@ -49,4 +51,32 @@ Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         }
 
         return tooltip
+    })
+
+//
+// Activate all popovers.
+//
+Array.from(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    .map(element => {
+        let popover = new Popover(element)
+
+        if (element.hasAttribute('data-bs-show')) {
+            popover.show()
+        }
+
+        return popover
+    })
+
+//
+// Activate all off-canvas togglers.
+//
+Array.from(document.getElementsByClassName('offcanvas'))
+    .map(element => {
+        let canvas = new Offcanvas(element)
+
+        if (element.hasAttribute('data-bs-show')) {
+            canvas.show()
+        }
+
+        return canvas
     })
