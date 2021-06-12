@@ -154,9 +154,9 @@ directory into your project, and install the [dev-dependencies](package.json) of
 - [x] Javascript - Dropdown (0.9.4)
 - [x] Javascript - Notification (0.9.5)
 - [x] Javascript - Modal (0.9.6)
-- [ ] Javascript - Tooltip (0.9.7)
-- [ ] Javascript - Popover (0.9.8)
-- [ ] Javascript - Off-canvas (0.9.9)
+- [x] Javascript - Tooltip (0.9.7)
+- [x] Javascript - Popover (0.9.8)
+- [x] Javascript - Off-canvas (0.9.9)
 - [ ] Javascript - Tab (0.9.10)
 
 ## License
