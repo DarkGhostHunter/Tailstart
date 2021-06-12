@@ -4,7 +4,9 @@
      * To make a button, use the `btn` class on links or buttons.
      */
     .btn {
-        @apply border rounded inline-block border px-3 py-2 outline-none transition-all ring-gray-200;
+        @apply border rounded inline-block border px-3 py-1 outline-none transition-all ring-gray-200;
+        /* These are just added styles if somebody uses an input[type="submit"] */
+        @apply bg-white cursor-pointer;
 
         /**
          * When the button is disabled via attribute or class, we can create a different style.
@@ -33,7 +35,7 @@
          * on media queries, like making the buttons smaller on small screens.
          */
         &.btn-sm {
-            @apply text-sm px-2 py-1;
+            @apply text-sm px-2 py-0;
         }
 
         &.btn-lg {
@@ -86,6 +88,29 @@
         &.btn-purple {
             @apply text-white bg-purple-600 border-purple-600 ring-purple-200;
         }
+    }
 
+    .btn-group {
+        @apply relative flex flex-row;
+
+        & > .btn {
+            @apply rounded-none -ml-px;
+
+            &:first-child {
+                @apply ml-0 rounded-l;
+            }
+
+            &:last-child {
+                @apply rounded-r;
+            }
+
+            &:hover {
+                @apply z-10;
+            }
+
+            &:focus, &:active {
+                @apply z-[11];
+            }
+        }
     }
 }

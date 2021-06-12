@@ -1,17 +1,31 @@
 @layer components {
     .input-group {
-        @apply flex items-stretch;
+        @apply relative flex items-stretch;
 
         & > *, & > input {
-            @apply block flex items-center px-3 rounded-r-none rounded-l-none
-                    border-r border-t border-b border-l-0;
+            @apply bg-white;
+            @apply -ml-px;
+            @apply block flex items-center px-3;
+            @apply rounded-r-none rounded-l-none !important;
+            @apply border;
 
             &:first-child {
-                @apply border rounded-l rounded-r-none;
+                @apply border;
+                @apply rounded-l rounded-r-none !important;
             }
 
             &:last-child {
-                @apply border-t border-l-0 border-b border-r rounded-r rounded-l-none;
+                @apply relative;
+                @apply border;
+                @apply rounded-r rounded-l-none !important;
+            }
+
+            &:hover, &:active {
+                @apply z-10;
+            }
+
+            &:focus {
+                @apply z-[11];
             }
         }
 

@@ -30,5 +30,8 @@
     "postcss-import": "^14.0.2",
     "postcss-nesting": "^8.0.1",
     "tailwindcss": "^2.1.4"
+  },
+  "dependencies": {
+    "postcss-input-range": "^4.0.0"
   }
 }

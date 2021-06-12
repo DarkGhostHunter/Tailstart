@@ -18,13 +18,15 @@
             }
 
             & .modal-header {
-                @apply flex flex-row items-center justify-between text-lg;
+                @apply flex flex-row items-stretch justify-between text-lg pr-0;
 
                 & h1, & h2, & h3, & h4, & h5, & h6 {
                     @apply mb-0;
                 }
 
                 & .btn-close {
+                    @apply px-3;
+
                     &:hover {
                         @apply text-red-500;
                     }

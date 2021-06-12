@@ -32,7 +32,7 @@
         <label for="custom-group-left">Input Group Left</label>
         <div class="input-group">
             <span class="input-group-text">Left</span>
-            <input type="text" value="" id="custom-group-left">
+            <input class="form-control" type="text" value="" id="custom-group-left">
         </div>
     </div>
 
@@ -40,7 +40,7 @@
         <label for="custom-group-left-disabled">Input Group left-disabled</label>
         <div class="input-group disabled">
             <span class="input-group-text">Left</span>
-            <input type="text" value="" id="custom-group-left-disabled" disabled>
+            <input class="form-control" type="text" value="" id="custom-group-left-disabled" disabled>
         </div>
     </div>
 
@@ -51,7 +51,7 @@
     <div class="mb-3">
         <label for="custom-group-right">Input Group Right</label>
         <div class="input-group">
-            <input type="text" value="" id="custom-group-right">
+            <input class="form-control" type="text" value="" id="custom-group-right">
             <span class="input-group-text">Right</span>
         </div>
     </div>
@@ -59,7 +59,7 @@
     <div class="mb-3">
         <label for="custom-group-right-disabled">Input Group Right Disabled</label>
         <div class="input-group disabled">
-            <input type="text" value="" id="custom-group-right-disabled" disabled>
+            <input class="form-control" type="text" value="" id="custom-group-right-disabled" disabled>
             <span class="input-group-text">Right</span>
         </div>
     </div>
@@ -72,7 +72,7 @@
         <label for="custom-group-surrounded">Input Group Surrounded</label>
         <div class="input-group">
             <span class="input-group-text">Right</span>
-            <input type="text" value="" id="custom-group-surrounded">
+            <input class="form-control" type="text" value="" id="custom-group-surrounded">
             <span class="input-group-text">Left</span>
         </div>
     </div>
@@ -81,7 +81,7 @@
         <label for="custom-group-surrounded-disabled">Input Group Surrounded Disabled</label>
         <div class="input-group disabled">
             <span class="input-group-text">Right</span>
-            <input type="text" value="" id="custom-group-surrounded-disabled" disabled>
+            <input class="form-control" type="text" value="" id="custom-group-surrounded-disabled" disabled>
             <span class="input-group-text">Left</span>
         </div>
     </div>
@@ -93,18 +93,18 @@
     <div class="mb-3">
         <label>Input Group In between</label>
         <div class="input-group">
-            <input type="text" value="">
+            <input class="form-control" type="text" value="">
             <span class="input-group-text">Center</span>
-            <input type="text" value="">
+            <input class="form-control" type="text" value="">
         </div>
     </div>
 
     <div class="mb-3">
         <label>Input Group In between Disabled</label>
         <div class="input-group disabled">
-            <input type="text" value="" disabled>
+            <input class="form-control" type="text" value="" disabled>
             <span class="input-group-text">Center</span>
-            <input type="text" value="" disabled>
+            <input class="form-control" type="text" value="" disabled>
         </div>
     </div>
 
@@ -117,7 +117,7 @@
         <div class="input-group">
             <span class="input-group-text">Left</span>
             <span class="input-group-text">Center</span>
-            <input type="text" value="" id="example-multiple-addons">
+            <input class="form-control" type="text" value="" id="example-multiple-addons">
         </div>
     </div>
 
@@ -126,7 +126,7 @@
         <div class="input-group disabled">
             <span class="input-group-text">Left</span>
             <span class="input-group-text">Center</span>
-            <input type="text" value="" id="example-multiple-addons-disabled" disabled>
+            <input class="form-control" type="text" value="" id="example-multiple-addons-disabled" disabled>
         </div>
     </div>
 
@@ -138,8 +138,8 @@
         <label>Multiple inputs</label>
         <div class="input-group">
             <span class="input-group-text">Left</span>
-            <input type="text" value="">
-            <input type="text" value="">
+            <input class="form-control" type="text" value="">
+            <input class="form-control" type="text" value="">
         </div>
     </div>
 
@@ -147,8 +147,8 @@
         <label>Multiple inputs Disabled</label>
         <div class="input-group disabled">
             <span class="input-group-text">Left</span>
-            <input type="text" value="" disabled>
-            <input type="text" value="" disabled>
+            <input class="form-control" type="text" value="" disabled>
+            <input class="form-control" type="text" value="" disabled>
         </div>
     </div>
 
@@ -161,7 +161,7 @@
         <label for="custom-group-textarea">Input Group Left</label>
         <div class="input-group">
             <span class="input-group-text">Left</span>
-            <textarea id="custom-group-textarea"></textarea>
+            <textarea class="form-control" id="custom-group-textarea"></textarea>
         </div>
     </div>
 
@@ -170,7 +170,7 @@
         <label for="custom-group-textarea-disabled">Input Group Left Disabled</label>
         <div class="input-group disabled">
             <span class="input-group-text">Left</span>
-            <textarea id="custom-group-textarea-disabled" disabled></textarea>
+            <textarea class="form-control" id="custom-group-textarea-disabled" disabled></textarea>
         </div>
     </div>
 
@@ -181,21 +181,27 @@
     <div class="mb-3">
         <label for="example-group-checkbox-with-input">Checkbox with Input</label>
         <div class="input-group">
-            <label>
-                <input type="checkbox" value="">
+            <div>
+            <input id="example-group-checkbox-with-input-checkbox"
+                   class="form-control" type="checkbox" value="">
+            <label for="example-group-checkbox-with-input-checkbox">
                 Left
             </label>
-            <input type="text" value="" id="example-group-checkbox-with-input">
+            </div>
+            <input class="form-control" type="text" value="" id="example-group-checkbox-with-input">
         </div>
     </div>
 
     <div class="mb-3">
         <label for="example-group-checkbox-with-input-disabled">Checkbox with Input</label>
         <div class="input-group">
-            <label>
-                <input type="checkbox" value="" disabled>
-                Left
-            </label>
+            <div>
+                <input id="example-group-checkbox-with-input-checkbox-disabled"
+                       class="form-control" type="checkbox" value="" disabled>
+                <label for="example-group-checkbox-with-input-checkbox-disabled">
+                    Left
+                </label>
+            </div>
             <input type="text" value="" id="example-group-checkbox-with-input-disabled" disabled>
         </div>
     </div>
@@ -207,26 +213,35 @@
     <div class="mb-3">
         <label for="example-group-radio-foo-with-input">Checkbox with Input</label>
         <div class="input-group">
-            <label>
-                <input type="radio" name="example-group-radio" value="">
-                Left
-            </label>
+            <div>
+                <input id="example-group-radio-foo-with-input-radio"
+                       class="form-control" type="radio" name="example-group-radio" value="">
+                <label for="example-group-radio-foo-with-input-radio">
+                    Left
+                </label>
+            </div>
             <input type="text" value="" id="example-group-radio-foo-with-input">
         </div>
         <label for="example-group-radio-bar-with-input">Checkbox with Input</label>
         <div class="input-group">
-            <label>
-                <input type="radio" name="example-group-radio" value="">
-                Left
-            </label>
+            <div>
+                <input id="example-group-radio-bar-with-input-radio"
+                       class="form-control" type="radio" name="example-group-radio" value="">
+                <label for="example-group-radio-bar-with-input-radio">
+                    Left
+                </label>
+            </div>
             <input type="text" value="" id="example-group-radio-bar-with-input">
         </div>
         <label for="example-group-radio-with-input-disabled">Checkbox with Input</label>
         <div class="input-group">
-            <label>
-                <input type="radio" name="example-group-radio" value="" disabled>
-                Left
-            </label>
+            <div>
+                <input id="example-group-radio-with-input-disabled-radio"
+                       class="form-control" type="radio" name="example-group-radio" value="" disabled>
+                <label for="example-group-radio-with-input-disabled-radio">
+                    Left
+                </label>
+            </div>
             <input type="text" value="" id="example-group-radio-with-input-disabled" disabled>
         </div>
     </div>
@@ -238,8 +253,8 @@
     <div class="mb-3">
         <label for="example-group-button-left">Button Left</label>
         <div class="input-group">
-            <button type="button">Submit</button>
-            <input type="text" value="" id="example-group-button-left">
+            <button class="btn" type="button">Submit</button>
+            <input class="form-control" type="text" value="" id="example-group-button-left">
         </div>
     </div>
 
@@ -247,14 +262,14 @@
     <div class="mb-3">
         <label for="example-group-button-right">Button Right</label>
         <div class="input-group">
-            <input type="text" value="" id="example-group-button-right">
-            <button type="button">Submit</button>
+            <input class="form-control" type="text" value="" id="example-group-button-right">
+            <button class="btn" type="button">Submit</button>
         </div>
     </div>
 
-    <div class="tailstart-separator">Selects</div>
+    <div class="tailstart-separator">Selects with labels</div>
 
-    <!-- Selects -->
+    <!-- Selects with labels -->
 
     <div class="mb-3">
         <label for="example-group-select">What's your favorite ice cream flavor?</label>
@@ -291,7 +306,7 @@
                 <option value="Option 2">Chocolate</option>
                 <option value="Option 3">Can I get your number?</option>
             </select>
-            <button type="button">Submit</button>
+            <button class="btn" type="button">Submit</button>
         </div>
     </div>
 
@@ -304,7 +319,7 @@
                 <option value="Option 2">Chocolate</option>
                 <option value="Option 3">Can I get your number?</option>
             </select>
-            <button type="button">Submit</button>
+            <button class="btn" type="button">Submit</button>
         </div>
     </div>
 
@@ -316,16 +331,16 @@
     <div class="mb-3">
         <label for="example-group-file-upload">File upload</label>
         <div class="input-group">
-            <input type="file" id="example-group-file-upload">
-            <button type="button">Submit</button>
+            <input class="form-control" type="file" id="example-group-file-upload">
+            <button class="btn" type="button">Submit</button>
         </div>
     </div>
 
     <div class="mb-3">
         <label for="example-group-file-upload-disabled">File upload</label>
         <div class="input-group">
-            <input type="file" id="example-group-file-upload-disabled" disabled>
-            <button type="button">Submit</button>
+            <input class="form-control" type="file" id="example-group-file-upload-disabled" disabled>
+            <button class="btn" type="button">Submit</button>
         </div>
     </div>
 

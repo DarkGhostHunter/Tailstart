@@ -6,8 +6,9 @@
             @apply flex flex-row divide-x;
 
             & > li {
+
                 & > a, & > span {
-                    @apply block px-3 py-2;
+                    @apply flex flex-row items-center gap-x-2 px-3 py-2 h-full;
 
                     &.current, &.remain {
                         @apply text-gray-300 cursor-default;

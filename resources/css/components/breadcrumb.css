@@ -6,20 +6,28 @@
             @apply border rounded flex flex-row gap-x-2;
 
             & > li {
-                @apply relative px-2 py-1;
+                @apply relative;
 
                 /* Magic arrow */
-                &:before {
-                    @apply absolute block -right-2 mt-2 border h-2 w-2;
-                    content: "";
+                &:after {
+                    @apply absolute block right-0 top-3 border h-2 w-2 transform origin-center rotate-[135deg];
+                    @apply translate-x-1.5;
+                    content: '';
                     border-right: none;
                     border-bottom: none;
-                    transform: rotate(135deg);
                 }
 
                 &:last-child {
-                    &:before {
+                    &:after {
                         @apply hidden;
+                    }
+                }
+
+                & > * {
+                    @apply inline-block px-2 py-1;
+
+                    &.current {
+                        @apply text-gray-400;
                     }
                 }
             }

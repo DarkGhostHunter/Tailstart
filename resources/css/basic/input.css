@@ -3,7 +3,10 @@
      * This styles all the form input with `form-control`, except the checkbox and
      * radio, as these are not input boxes per-se.
      */
-    .form-control:not([type="checkbox"], [type="radio"]) {
+    .form-control:not([type="checkbox"], [type="radio"], [type="range"]) {
+        /* Let's add a background to avoid transparency */
+        @apply bg-white;
+
         /**
          * This removes any Safari style, like the default inner shadow of inputs.
          */
@@ -82,15 +85,7 @@
             }
         }
 
-        /**
-         * This styles the range input exclusively.
-         */
-
-        &:is([type="range"]) {
-            @apply block border bg-gray-100 w-full p-0 h-2 my-2 cursor-pointer;
-        }
-
-        &:active {
+        &:not(select,[type="file"]):active {
             @apply bg-blue-100 border-blue-100;
         }
 
@@ -134,14 +129,14 @@
      * Finally, we will style the file upload button.
      */
     input[type="file"].form-control {
-        @apply pr-8 pl-0 py-0 min-h-[2em];
+        @apply w-full p-0 min-h-[2em] truncate;
 
         /**
          * This styles the button.
          */
         &::file-selector-button {
             @apply pointer-events-none;
-            @apply min-h-[2em] pl-8 pr-2 py-1 m-0 mr-2;
+            @apply min-h-[2em] h-full pl-8 pr-2 py-1 m-0 mr-2;
             @apply border-0 rounded-l rounded-r-none;
             @apply bg-gray-100;
             border-inline-end-width: 1px;
@@ -157,6 +152,42 @@
 
         &:hover:not(:disabled):not([readonly])::file-selector-button {
             @apply bg-gray-200;
+        }
+    }
+
+    /**
+     * For the range input, we will need to use the prefix for each browser.
+     * Since that's is cumbersome, we will use postcss-input-range.
+     *
+     * For some reason, styling the track using ::range-track is very unreliable.
+     *
+     * @see https://github.com/csstools/postcss-input-range
+     */
+    input[type="range"].form-control {
+        appearance: none;
+
+        @apply block w-full p-0 h-2 my-2;
+        @apply border bg-gray-100 outline-none rounded-full cursor-pointer;
+
+        &::range-thumb {
+            appearance: none;
+            @apply bg-blue-500 rounded-full w-4 h-4 ring-0 ring-blue-200 transition-all border-0;
+
+            &:hover, &:focus {
+                @apply ring-4;
+            }
+
+            &:active {
+                @apply ring-2;
+            }
+        }
+
+        &.disabled, &:disabled {
+            @apply pointer-events-none;
+
+            &::range-thumb {
+                @apply bg-gray-400;
+            }
         }
     }
 }

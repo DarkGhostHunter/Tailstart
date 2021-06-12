@@ -1,13 +1,28 @@
 @layer components {
     .dropdown-menu {
-        @apply hidden absolute bg-white rounded border py-2 shadow;
+        @apply hidden absolute bg-white rounded border py-2;
 
         &.show {
             @apply block;
         }
 
         & .dropdown-item, & .dropdown-item-text, & .dropdown-header {
-            @apply block px-4 py-2;
+            @apply block w-full px-4 py-2 text-left;
+        }
+
+        & .dropdown-header {
+            @apply cursor-default;
+        }
+
+
+        & .dropdown-item {
+            &:hover, &:focus {
+                @apply bg-gray-100;
+            }
+
+            &:active {
+                @apply bg-gray-200;
+            }
         }
 
         & .dropdown-header {

@@ -35,4 +35,11 @@
     datalist {
         @apply hidden;
     }
+
+    /**
+     * If we find a label, we will add cursor-pointer.
+     */
+    label {
+        @apply cursor-pointer;
+    }
 }

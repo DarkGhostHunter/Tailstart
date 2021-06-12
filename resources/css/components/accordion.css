@@ -7,6 +7,10 @@
 
             &:first-child {
                 @apply rounded-t border-t;
+
+                & .accordion-header .accordion-button {
+                    @apply rounded-t;
+                }
             }
 
             &:last-child {
@@ -14,6 +18,10 @@
 
                 & .accordion-header {
                     @apply border-b-0;
+
+                    & .accordion-button.collapsed {
+                        @apply rounded-b;
+                    }
                 }
 
                 & .accordion-body {
@@ -22,11 +30,38 @@
             }
 
             & .accordion-header {
+                @apply relative;
+
                 & .accordion-button {
-                    @apply w-full text-left px-3 py-2;
+                    @apply relative w-full text-left px-3 py-2 outline-none ring-0 ring-gray-200 transition-all;
+                    @apply bg-white;
+
+                    &:hover, &:focus, &:active {
+                        @apply z-[11];
+                    }
+
+                    &:hover, &:focus {
+                        @apply ring-4;
+                    }
+
+                    &:active {
+                        @apply ring-2;
+                    }
+
+                    &:after {
+                        content: '';
+                        @apply absolute right-0 top-0 h-full w-10 transition-all transform-gpu rotate-180;
+                        @apply bg-center bg-no-repeat;
+                        background-size: 1rem 1rem;
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+                    }
 
                     &:not(.collapsed) {
-                        @apply text-blue-500;
+                        @apply z-10 bg-blue-50 text-blue-500 ring-blue-200;
+
+                        &:after {
+                            @apply rotate-0;
+                        }
                     }
                 }
             }

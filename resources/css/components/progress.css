@@ -1,6 +1,6 @@
 @layer components {
     .progress {
-        @apply relative h-6 w-full mb-2 rounded border overflow-hidden shadow-sm;
+        @apply relative h-6 w-full mb-2 rounded border overflow-hidden;
 
         & .progress-bar {
             @apply h-full mb-2 bg-gray-400;
