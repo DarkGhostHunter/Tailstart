@@ -1,3 +1,89 @@
 @layer components {
+    .tooltip {
+        @apply absolute block z-40 text-sm break-words opacity-0;
 
+        &.fade {
+            @apply transition-opacity;
+        }
+
+        &.show {
+            @apply opacity-90;
+        }
+
+        & .tooltip-arrow {
+            @apply absolute block;
+            @apply w-2 h-2;
+
+            &:before {
+                @apply absolute border border-solid border-transparent;
+
+                content: '';
+                border-width: theme('spacing.2');
+            }
+        }
+
+        & .tooltip-inner {
+            @apply px-3 py-2 bg-gray-900 text-center text-gray-50 rounded;
+        }
+
+        &.bs-tooltip-top {
+            @apply pb-2;
+
+            & .tooltip-arrow {
+                @apply bottom-0 w-4;
+
+                &:before {
+                    @apply -top-px border-opacity-90;
+                    @apply border-b-0;
+
+                    border-top-color: theme('colors.gray.900');
+                }
+            }
+        }
+
+        &.bs-tooltip-end {
+            @apply pl-2;
+
+            & .tooltip-arrow {
+                @apply left-0 h-4;
+
+                &:before {
+                    @apply -right-px border-opacity-90;
+                    @apply border-l-0;
+
+                    border-right-color: theme('colors.gray.900');
+                }
+            }
+        }
+
+        &.bs-tooltip-bottom {
+            @apply pt-2;
+
+            & .tooltip-arrow {
+                @apply top-0 w-4;
+
+                &:before {
+                    @apply -bottom-px border-opacity-90;
+                    @apply border-t-0;
+
+                    border-bottom-color: theme('colors.gray.900');
+                }
+            }
+        }
+
+        &.bs-tooltip-start {
+            @apply pr-2;
+
+            & .tooltip-arrow {
+                @apply right-0 h-4;
+
+                &:before {
+                    @apply -left-px border-opacity-90;
+                    @apply border-r-0;
+
+                    border-left-color: theme('colors.gray.900');
+                }
+            }
+        }
+    }
 }
