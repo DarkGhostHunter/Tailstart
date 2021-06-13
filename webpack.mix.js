@@ -1,10 +1,13 @@
 const mix = require('laravel-mix');
 
-//
-// Tailstart files for internal styling.
-//
-mix.js('tailstart/js/tailstart.js', 'public/tailstart/js')
-    .postCss('tailstart/css/tailstart.css', 'public/tailstart/css');
+// If we're not on production, don't process the Tailstart CSS and JS.
+if (process.env.NODE_ENV !== "production") {
+    //
+    // Tailstart files for internal styling.
+    //
+    mix.js('tailstart/js/tailstart.js', 'public/tailstart/js')
+        .postCss('tailstart/css/tailstart.css', 'public/tailstart/css');
+}
 
 //
 // Your application files

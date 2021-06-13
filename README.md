@@ -71,7 +71,7 @@ That being said, if you're creating a Javascript app around components, Componen
 | Final output takes may take a dozen of KB | PurgeCSS and CSSnano outputs generate very small builds |
 | Good for Server-Side rendering | Good for Client-Side rendering (Javascript)
 
-As a comparison, **Bootstrap 5 generates a minified 150~ KB stylesheet**.
+Tailstart compiles a 80Kb stylesheet. As a comparison, **Bootstrap 5 generates a minified 150~ KB stylesheet**.
 
 ## Out-of-the-box experience
 
