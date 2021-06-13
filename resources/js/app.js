@@ -6,6 +6,7 @@ import Modal from "bootstrap/js/src/modal"
 import Tooltip from "bootstrap/js/src/tooltip"
 import Popover from "bootstrap/js/src/popover"
 import Offcanvas from "bootstrap/js/src/offcanvas"
+import Tab from "bootstrap/js/src/tab"
 
 //
 // Enable Dark Mode.
@@ -68,7 +69,7 @@ Array.from(document.querySelectorAll('[data-bs-toggle="popover"]'))
     })
 
 //
-// Activate all off-canvas togglers.
+// Activate all off-canvas toggles.
 //
 Array.from(document.getElementsByClassName('offcanvas'))
     .map(element => {
@@ -79,4 +80,19 @@ Array.from(document.getElementsByClassName('offcanvas'))
         }
 
         return canvas
+    })
+
+//
+// Activate all the tabs.
+//
+Array.from(document.querySelectorAll('[data-bs-toggle="tab"]'))
+    .map(element => {
+        let tab = new Tab(element)
+
+        element.addEventListener('click', event => {
+            event.preventDefault()
+            tab.show()
+        })
+
+        return tab
     })

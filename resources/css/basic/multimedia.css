@@ -62,8 +62,16 @@
         &.video {
             @apply relative;
 
-            & .mm-controls {
-                @apply absolute w-full bottom-0 bg-white rounded-b border-0;
+            & > video {
+                @apply rounded;
+            }
+
+            & > .mm-title {
+                @apply absolute top-0 w-full border-0 bg-opacity-90 bg-white text-gray-500;
+            }
+
+            & > .mm-controls {
+                @apply absolute bottom-0 w-full border-0 bg-opacity-90 bg-white rounded-b;
             }
         }
     }

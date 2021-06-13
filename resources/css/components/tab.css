@@ -1,3 +1,55 @@
 @layer components {
+    .nav-tabs {
+        /** Adding overflow auto will allow to scroll the tabs when these doesn't fit */
+        @apply flex flex-row rounded-none border-0 overflow-y-auto;
 
+        & .nav-link {
+            @apply outline-none;
+            @apply inline-block rounded-t text-gray-500 text-sm px-2 py-1;
+            @apply md:text-base md:px-3 md:py-2;
+            /** Allow more space on bigger screens */
+            @apply border border-transparent;
+
+            border-bottom-color: theme('colors.gray.200');
+
+            &:hover, &:focus, &:active {
+                @apply outline-none;
+            }
+
+            &:hover, &:focus {
+                @apply text-blue-500;
+            }
+
+            &.active {
+                @apply text-gray-900 relative border-gray-200;
+
+                &:after {
+                    @apply absolute w-full left-0 -bottom-px border-b border-white;
+                    content: '';
+                }
+            }
+        }
+    }
+
+    .tab-content {
+        & > .tab-pane {
+            @apply hidden;
+
+            &.active {
+                @apply block;
+            }
+
+            &.show {
+                @apply opacity-100;
+            }
+
+            &.fade {
+                @apply transition-opacity;
+
+                &:not(.show) {
+                    @apply opacity-0;
+                }
+            }
+        }
+    }
 }

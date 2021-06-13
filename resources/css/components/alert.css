@@ -12,12 +12,8 @@
                 @apply transition-all duration-500 opacity-0;
             }
 
-            & .dismiss {
-                @apply absolute top-2 right-2 p-2 text-xl rounded text-red-500;
-
-                &:hover, &:focus {
-                    @apply bg-red-500 border-red-500 text-red-50 outline-none;
-                }
+            & .btn-close {
+                @apply absolute top-2 right-2;
             }
         }
 
