@@ -6,7 +6,7 @@
     }
 
     pre {
-        @apply border border-gray-200 shadow-inner shadow rounded;
+        @apply border border-gray-200 rounded;
         @apply overflow-y-auto;
         @apply px-3 py-2 mb-3;
         @apply text-gray-600;

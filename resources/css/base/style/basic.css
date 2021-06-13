@@ -1,5 +1,28 @@
 @layer base {
+    /*
+     * You can change bold and italics styles here, along some others.
+     */
     em, strong {
         @apply text-gray-700;
+    }
+
+    u {
+
+    }
+
+    del, s {
+        @apply text-gray-500;
+    }
+
+    sub {
+
+    }
+
+    sup {
+
+    }
+
+    small {
+
     }
 }

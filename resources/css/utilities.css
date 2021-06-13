@@ -1,7 +1,7 @@
 /**
  * This is a good place to add your own Tailwind-style utilities.
  *
- * Just for show, there is one you can build upon.
+ * Just for show, here we made one so you can build upon.
  */
 @layer utilities {
    @variants responsive {

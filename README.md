@@ -25,11 +25,11 @@ If you don't have Node.js, [this is a good opportunity to install it](https://no
 
 ## Usage
 
-Tailstart is basically a [Laravel Mix](https://github.com/JeffreyWay/laravel-mix)-powered server that serves static HTML files and parses PostCSS, and as you are guessing now, including the Tailwind CSS framework. It's meant to be used with [Component Extraction](https://tailwindcss.com/docs/extracting-components).
+Tailstart is basically a [Laravel Mix](https://github.com/JeffreyWay/laravel-mix)-powered server that serves static HTML files, parses PostCSS and, as you are guessing now, includes the Tailwind CSS framework. It's meant to be used with [Component Extraction](https://tailwindcss.com/docs/extracting-components).
 
-To start developing, just call `npm mix`:
+To start developing, just call `npm mix watch`:
 
-    $> npm mix
+    $> npm mix watch
     
         Laravel Mix v6.0
         ┌─────────────────────────────────────┬───────────┐
@@ -109,7 +109,7 @@ Instead of reinventing the wheel, Tailstart uses [Bootstrap 5's ESM-enabled Java
 - It makes your frontend compatible if you're switching from Bootstrap.
 - It's compatible with Vue, React, Angular and what else.
 
-You can check how Tailstart enables everything at once in the [`app.js`](resources/js/app.js) file.
+You can check how Tailstart enables everything at once in the [`app.js`](resources/js/app.js) file. All of these components are styled in [`resources/css/javascript/`](resources/css/javascript).
 
 In the meantime, see this example of using a modal with Bootstrap with Vue 3:
 
@@ -143,21 +143,6 @@ Call `mix production`, and you should see the final output in your `public/css` 
 
 If you're developing a [Laravel application](https://laravel.com/), you may want to just copy-paste the `resources/`
 directory into your project, and install the [dev-dependencies](package.json) of this package.
-
-## Road to v1.0
-
-- [x] Better toolchain for developing and compiling (Laravel Mix) (0.7)
-- [x] Base - Multimedia HTML (video, audio, embed) (0.8)
-- [x] Javascript - Dark Mode (0.9.0)
-- [x] Javascript - Accordion (0.9.2)
-- [x] Javascript - Collapsible (0.9.3)
-- [x] Javascript - Dropdown (0.9.4)
-- [x] Javascript - Notification (0.9.5)
-- [x] Javascript - Modal (0.9.6)
-- [x] Javascript - Tooltip (0.9.7)
-- [x] Javascript - Popover (0.9.8)
-- [x] Javascript - Off-canvas (0.9.9)
-- [ ] Javascript - Tab (0.9.10)
 
 ## License
 

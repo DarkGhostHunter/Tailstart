@@ -18,6 +18,9 @@
             @apply w-[19em];
         }
 
+        /**
+         * Vertical off-canvas will grow based on their content.
+         */
         &.offcanvas-top, &.offcanvas-bottom {
             @apply h-auto;
         }
