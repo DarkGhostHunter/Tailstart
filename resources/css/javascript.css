@@ -1,0 +1,14 @@
+/**
+ * These components require Javascript to properly function.
+ *
+ * There is a convenient `/src/js/app.js` file you can use to add interactivity to them.
+ */
+@import "javascript/accordion.css";
+@import "javascript/collapse.css";
+@import "javascript/dropdown.css";
+@import "javascript/dismiss.css";
+@import "javascript/modal.css";
+@import "javascript/tooltip.css";
+@import "javascript/popover.css";
+@import "javascript/offcanvas.css";
+@import "javascript/tab.css";

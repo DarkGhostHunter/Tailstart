@@ -1,0 +1,14 @@
+@layer components {
+    /**
+     * We will make alerts dismissible if these contain a "dismissible" class and a close button.
+     */
+    .alert.alert-dismissible {
+        &:not(.show) {
+            @apply transition-all opacity-0;
+        }
+
+        & .btn-close {
+            @apply absolute top-2 right-2;
+        }
+    }
+}

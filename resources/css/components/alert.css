@@ -6,17 +6,6 @@
             @apply pb-3 text-xl border-b;
         }
 
-        &.alert-dismissible {
-
-            &:not(.show) {
-                @apply transition-all duration-500 opacity-0;
-            }
-
-            & .btn-close {
-                @apply absolute top-2 right-2;
-            }
-        }
-
         &.alert-gray {
             @apply border-gray-200 text-gray-900 bg-gray-50;
             & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {

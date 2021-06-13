@@ -1,0 +1,12 @@
+/**
+ * Here you can edit your components.
+ *
+ * These components are added to the "components" layer of Tailwind.
+ */
+@import "basic/button.css";
+@import "basic/leading.css";
+@import "basic/input.css";
+@import "basic/switches.css";
+@import "basic/image.css";
+@import "basic/multimedia.css";
+@import "basic/figure.css";

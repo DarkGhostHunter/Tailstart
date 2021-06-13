@@ -1,17 +1,4 @@
 /**
- * Here you can edit your components.
- *
- * These components are added to the "components" layer of Tailwind.
- */
-@import "basic/button.css";
-@import "basic/leading.css";
-@import "basic/input.css";
-@import "basic/switches.css";
-@import "basic/image.css";
-@import "basic/multimedia.css";
-@import "basic/figure.css";
-
-/**
  * These are more advanced components crated on top of base tags.
  *
  * Feel free to edit them, since these work after you add a distinctive class to them.
@@ -27,18 +14,3 @@
 @import "components/navigation.css";
 @import "components/breadcrumb.css";
 @import "components/pagination.css";
-
-/**
- * These components require Javascript to properly function.
- *
- * There is a convenient `/src/js/app.js` file you can use to add interactivity to them.
- */
-@import "components/accordion.css";
-@import "components/collapse.css";
-@import "components/dropdown.css";
-@import "components/notification.css";
-@import "components/modal.css";
-@import "components/tooltip.css";
-@import "components/popover.css";
-@import "components/offcanvas.css";
-@import "components/tab.css";
