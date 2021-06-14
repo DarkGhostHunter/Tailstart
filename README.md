@@ -124,7 +124,7 @@ In the meantime, see this example of using a modal with Bootstrap with Vue 3:
 </template>
 
 <script>
-import { Modal } from 'bootstrap'
+import Modal from "bootstrap/js/src/modal"
 
 export default {
     data: () => ({
@@ -143,6 +143,15 @@ Call `mix production`, and you should see the final output in your `public/css` 
 
 If you're developing a [Laravel application](https://laravel.com/), you may want to just copy-paste the `resources/`
 directory into your project, and install the [dev-dependencies](package.json) of this package.
+
+## Using another bundler
+
+You can use another bundler, but nothing has been performant and easy to use than Laravel Mix:
+
+- [Snowpack doesn't work with PostCSS Import](https://github.com/snowpackjs/snowpack/discussions/1693)
+- Vite works but on frontend frameworks.
+- Rollup should theoretically work.
+- Parcel should theoretically work.
 
 ## License
 
