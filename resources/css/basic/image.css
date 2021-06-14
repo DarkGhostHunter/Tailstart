@@ -1,11 +1,20 @@
 @layer components {
+    /**
+     * For images, we can just round them.
+     */
     .img, picture > .img {
         @apply rounded;
 
+        /**
+         * Responsive images will adjust their height automatically.
+         */
         &.responsive {
             @apply w-full h-auto;
         }
 
+        /**
+         * Thumbnails images that float into text.
+         */
         &.thumbnail {
             @apply inline-block border p-2 mb-2;
 

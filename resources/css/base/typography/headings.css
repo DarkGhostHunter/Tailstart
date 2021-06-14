@@ -2,20 +2,20 @@
     /**
      * Tailwind CSS strips headings from any size, so we will add them
      * back along with a margin at the bottom to separate it from the
-     * next paragraphs or leading. H3 and below use the same maring.
+     * next paragraphs or leading. H3 and below use the same margin.
      */
     h1 {
-        @apply text-3xl md:text-5xl lg:text-6xl;
+        @apply text-3xl md:text-4xl lg:text-6xl;
         @apply mb-6 md:mb-10;
     }
 
     h2 {
-        @apply text-2xl md:text-4xl lg:text-5xl;
+        @apply text-2xl md:text-3xl lg:text-5xl;
         @apply mb-4 md:mb-8;
     }
 
     h3 {
-        @apply text-xl md:text-3xl lg:text-4xl;
+        @apply text-xl md:text-2xl lg:text-4xl;
         @apply mb-2 md:mb-4;
     }
 

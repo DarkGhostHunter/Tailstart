@@ -1,4 +1,7 @@
+/**
+ * Here you can find the base blocks for text styling, from italics and
+ * bold weight, to quotes and code.
+ */
 @import "style/basic.css";
-@import "style/quotes.css";
-@import "style/keyboard.css";
-@import "style/code.css";
+@import "style/annotation.css";
+@import "style/preformated.css";

@@ -3,7 +3,7 @@
      * This is the main block to allow use to easily style all inputs that are
      * not a form buttons, as these will have their own style through a class.
      */
-    input:not([type="button"],[type="reset"],[type="submit"],[type="checkbox"],[type="radio"]),
+    input:not([type="button"], [type="reset"], [type="submit"], [type="checkbox"], [type="radio"]),
     select,
     textarea
     {
@@ -20,13 +20,22 @@
         &:focus, &:hover, &:active {
             @apply outline-none;
         }
+
+        /**
+         * This is a fix to have the cursor become a pointer if not focused.
+         */
+        &:not(:focus) {
+            @apply cursor-pointer;
+        }
     }
 
     /**
      * Selects, Checkboxes, Radios, and file uploads should have a pointer cursor.
      */
     select, input[type="checkbox"], input[type="radio"], input[type="file"] {
-        @apply cursor-pointer;
+        &:not(.disabled, :disabled), &:focus {
+            @apply cursor-pointer;
+        }
     }
 
     /**

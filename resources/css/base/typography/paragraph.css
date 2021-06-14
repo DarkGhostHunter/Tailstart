@@ -1,4 +1,9 @@
 @layer base {
+    /**
+     * The paragraph element.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/p
+     */
     p {
         @apply leading-relaxed mb-4;
     }

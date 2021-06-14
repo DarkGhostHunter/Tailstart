@@ -30,7 +30,8 @@
         <p>Lorem <strong>ipsum dolor</strong> sit amet, consectetur adipiscing elit. Vivamus sapien justo, fringilla <b>non lectus ac</b>, auctor sagittis eros.</p>
         <p>Lorem <em>ipsum dolor</em> sit amet, consectetur adipiscing elit. Vivamus sapien justo, fringilla <i>non lectus ac</i>, auctor sagittis eros.</p>
         <p>Lorem <u>ipsum dolor</u> sit amet, consectetur adipiscing elit.</p>
-        <p>Lorem <del>ipsum dolor</del> sit amet, consectetur adipiscing elit. Vivamus sapien justo, fringilla <s>non lectus ac</s>, auctor sagittis eros.</p>
+        <p>Vivamus sapien justo, fringilla <s>non lectus ac</s>, auctor sagittis eros.</p>
+        <p>Lorem <ins>ipsum dolor</ins> sit amet, consectetur adipiscing elit. Vivamus sapien justo, fringilla <del>non lectus ac</del>, auctor sagittis eros.</p>
         <p>This text contains <sub>subscript</sub> text.</p>
         <p>This text contains <sup>superscript</sup> text.</p>
         <p>This text contains <small>small text</small> that should be used with care.</p>
@@ -81,6 +82,12 @@
     </div>
 
     <div>
+        <p>This quote is from the IETF, about avian carriers:
+            <q cite="https://datatracker.ietf.org/doc/html/rfc1149">Avian carriers can provide high delay, low throughput, and low altitude service. The connection topology is limited to a single point-to-point path for each carrier, used with standard carriers, but many carriers can be used without significant interference with each other, outside of early spring. This is because of the 3D ether space available to the carriers, in contrast to the 1D ether used by IEEE802.3. The carriers have an intrinsic collision avoidance system, which increases availability.</q>
+        </p>
+    </div>
+
+    <div>
         <figure>
             <blockquote cite="https://www.huxley.net/bnw/four.html">
                 <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
@@ -120,24 +127,15 @@
             <dfn>Firmware used to perform hardware initialization during the booting process (power-on startup), and to provide runtime services for operating systems and programs.</dfn>
         </p>
     </div>
+    <div>
+        <p>
+            The HTML tag <dfn title="Indicates the term being defined within the context of a definition phrase or sentence">&lt;dfn&gt;</dfn> is usually present on text that includes the term to define but doesn't want to get into definition details.
+        </p>
+    </div>
 
     <div>
         <p>Several species of <mark>salamander</mark> inhabit the temperate rainforest of the Pacific Northwest.</p>
         <p>Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and other small creatures.</p>
-    </div>
-
-    <div class="tailstart-separator">Details</div>
-
-    <!-- Details -->
-
-    <div>
-        <details>
-            <summary>This is the summary of the detail description</summary>
-            <div>
-                <p>Several species of <mark>salamander</mark> inhabit the temperate rainforest of the Pacific Northwest.</p>
-                <p>Most <mark>salamander</mark>s are nocturnal, and hunt for insects, worms, and other small creatures.</p>
-            </div>
-        </details>
     </div>
 
     <div class="tailstart-separator"></div>

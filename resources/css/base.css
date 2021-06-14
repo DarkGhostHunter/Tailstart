@@ -2,10 +2,10 @@
 @import "base/style.css";
 
 /**
- * This is just a simple non-invasive form resetter.
+ * This is just a simple non-invasive form reset.
  *
  * While this should suffice for most projects, you may want to use Tailwind CSS
- * form resetter for more complex scenarios.
+ * form reset for more complex scenarios.
  *
  * @see https://github.com/tailwindlabs/tailwindcss-forms
  */

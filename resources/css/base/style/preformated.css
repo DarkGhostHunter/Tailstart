@@ -1,10 +1,20 @@
 @layer base {
+    /**
+     * Short fragment computer code.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/code
+     */
     code {
         @apply px-1 rounded;
         @apply bg-gray-100;
         @apply text-gray-600;
     }
 
+    /**
+     * Preformatted text, like HTML or JSON.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/pre
+     */
     pre {
         @apply border border-gray-200 rounded;
         @apply overflow-y-auto;
@@ -12,6 +22,11 @@
         @apply text-gray-600;
     }
 
+    /**
+     * Output from a computer program.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/pre
+     */
     samp {
         @apply px-2;
         @apply border border-gray-100;
@@ -20,6 +35,11 @@
         @apply bg-gray-50;
     }
 
+    /**
+     * Variable in a mathematical expression.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/var
+     */
     var {
         @apply inline-block border rounded-full;
         @apply px-2;

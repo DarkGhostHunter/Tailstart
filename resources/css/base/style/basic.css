@@ -1,27 +1,83 @@
 @layer base {
-    /*
-     * You can change bold and italics styles here, along some others.
+    /**
+     * Text emphasis, usually italics.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/em
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/i
      */
-    em, strong {
+    em, i {
         @apply text-gray-700;
     }
 
-    u {
-
+    /**
+     * Text importance, usually bold.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/strong
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/s
+     */
+    strong, s {
+        @apply text-gray-700;
     }
 
-    del, s {
+    /**
+     * This is mostly used for an underline.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/u
+     */
+    u {
+        text-decoration-color: theme('colors.gray.400')
+    }
+
+    /**
+     * This is a strike-through style. <del> is used for contextual deletion, while <s> is just the style.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/del
+     */
+    del {
+        @apply bg-red-500 bg-opacity-50;
+    }
+
+    /**
+     * This is the contextual addition of text.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/inst
+     */
+    ins {
+        @apply bg-green-500 bg-opacity-50 no-underline;
+    }
+
+    /**
+     * This is a strike-through style. <del> is used for contextual deletion, while <s> is just the style.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/s
+     */
+    s {
         @apply text-gray-500;
     }
 
+    /**
+     * Subscript for solely typographical reasons, like displaying molecules.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/sub
+     */
     sub {
 
     }
 
+    /**
+     * Superscript for solely typographical reasons, like on equations.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/sup
+     */
     sup {
 
     }
 
+    /**
+     * Side-text with lesser importance.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/small
+     */
     small {
 
     }

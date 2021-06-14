@@ -21,9 +21,9 @@
                 <summary>Usage</summary>
                 <div>
                     <p>This <code>index.html</code> contains links to child HTML files, each containing HTML components.</p>
-                    <p>You should edit the PostCSS files located in <code>/src/css/</code> to edit the style, which by default are empty or with a few guidelines.</p>
-                    <p>You can run the server using <code>yarn dev</code> or <code>npm dev</code>, and start editing the files. Your CSS changes will be instantly updated in your browser.</p>
-                    <p>Alternatively, you can edit each HTML itself for using with Component Extraction later.</p>
+                    <p>You should edit the PostCSS files located in <code>/resources/css/</code> to edit the style, which by default are empty or with a few guidelines.</p>
+                    <p>You can run the server using <code>yarn watch</code> or <code>npm watch</code>, and start editing the files. Your CSS changes will be instantly updated in your browser.</p>
+                    <p>Alternatively, you can edit each HTML itself for using without Component Extraction.</p>
                     <p>Happy coding!</p>
                 </div>
             </details>
@@ -86,14 +86,25 @@
                     </a>
                 </li>
                 <li>
-                    <a href="leading.html" target="_self">
+                    <a href="details.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
-                            Leading
+                            Details
                         </h3>
-                        <p>Big title with subtitle</p>
+                        <p>Block with a summary line and detailed text.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="figure.html" target="_self">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Figure
+                        </h3>
+                        <p>Figures for video, audio, images, embed and pictures.</p>
                     </a>
                 </li>
                 <li>
@@ -105,17 +116,6 @@
                             Form
                         </h3>
                         <p>Select, text-areas, and other inputs styled by a single class.</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="input.html" target="_self">
-                        <h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                            </svg>
-                            Input
-                        </h3>
-                        <p>Date pickers, ranges, sliders...</p>
                     </a>
                 </li>
                 <li>
@@ -131,14 +131,25 @@
                     </a>
                 </li>
                 <li>
-                    <a href="figure.html" target="_self">
+                    <a href="input.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
                             </svg>
-                            Figure
+                            Input
                         </h3>
-                        <p>Figures for video, audio, images, embed and pictures.</p>
+                        <p>Custom checkboxes, pickers, ranges, sliders...</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="leading.html" target="_self">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Leading
+                        </h3>
+                        <p>Big title with subtitle</p>
                     </a>
                 </li>
             </ul>
@@ -155,14 +166,14 @@
             </div>
             <ul>
                 <li>
-                    <a href="progress.html" target="_self">
+                    <a href="alert.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
                             </svg>
-                            Progress bar
+                            Alert
                         </h3>
-                        <p>A bar denoting progress. Sometimes is controlled by Javascript.</p>
+                        <p>Blocks denoting warnings, danger, success, or other temporal information.</p>
                     </a>
                 </li>
                 <li>
@@ -177,14 +188,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="alert.html" target="_self">
+                    <a href="breadcrumb.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                             </svg>
-                            Alert
+                            Breadcrumb
                         </h3>
-                        <p>Blocks denoting warnings, danger, success, or other temporal information.</p>
+                        <p>Navigation bar that informs page hierarchy.</p>
                     </a>
                 </li>
                 <li>
@@ -199,14 +210,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="list.html" target="_self">
+                    <a href="group.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                             </svg>
-                            List group
+                            Input group
                         </h3>
-                        <p>Elaborated lists of information, each piece related to their neighbors.</p>
+                        <p>Inputs paired as groups with buttons, labels, checkboxes, inputs or radios.</p>
                     </a>
                 </li>
                 <li>
@@ -221,25 +232,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="group.html" target="_self">
+                    <a href="list.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
                             </svg>
-                            Input group
+                            List group
                         </h3>
-                        <p>Inputs paired as groups with buttons, labels, checkboxes, inputs or radios.</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="table.html" target="_self">
-                        <h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                            </svg>
-                            Table
-                        </h3>
-                        <p>Table head, body, footer, cells...</p>
+                        <p>Elaborated lists of information, each piece related to their neighbors.</p>
                     </a>
                 </li>
                 <li>
@@ -254,17 +254,6 @@
                     </a>
                 </li>
                 <li>
-                    <a href="breadcrumb.html" target="_self">
-                        <h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                            Breadcrumb
-                        </h3>
-                        <p>Navigation bar that informs page hierarchy.</p>
-                    </a>
-                </li>
-                <li>
                     <a href="pagination.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -273,6 +262,28 @@
                             Pagination
                         </h3>
                         <p>List of links to navigate along a paginated set of items.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="progress.html" target="_self">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Progress bar
+                        </h3>
+                        <p>A bar denoting progress. Sometimes is controlled by Javascript.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="table.html" target="_self">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                            Table
+                        </h3>
+                        <p>Table head, body, footer, cells...</p>
                     </a>
                 </li>
                 <li>
@@ -300,14 +311,15 @@
             </div>
             <ul>
                 <li>
-                    <a href="dark.html" target="_self">
+                    <a href="accordion.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
                             </svg>
-                            Dark Mode
+
+                            Accordion
                         </h3>
-                        <p>Dark mode detection and switch for toggling it on and off.</p>
+                        <p>Plegable lists based on the Collapsible component.</p>
                     </a>
                 </li>
                 <li>
@@ -322,26 +334,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="accordion.html" target="_self">
+                    <a href="dark.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                             </svg>
-
-                            Accordion
+                            Dark Mode
                         </h3>
-                        <p>Plegable lists based on the Collapsible component.</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="dropdown.html" target="_self">
-                        <h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
-                            </svg>
-                            Dropdown
-                        </h3>
-                        <p>Menus with different actions.</p>
+                        <p>Dark mode detection and switch for toggling it on and off.</p>
                     </a>
                 </li>
                 <li>
@@ -356,6 +356,17 @@
                     </a>
                 </li>
                 <li>
+                    <a href="dropdown.html" target="_self">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+                            </svg>
+                            Dropdown
+                        </h3>
+                        <p>Menus with different actions.</p>
+                    </a>
+                </li>
+                <li>
                     <a href="modal.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -367,25 +378,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="tooltips.html" target="_self">
+                    <a href="multimedia.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
                             </svg>
-                            Tooltip
+                            Multimedia
                         </h3>
-                        <p>Tiny informational pop-overs over elements.</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="popover.html" target="_self">
-                        <h3>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                            </svg>
-                            Popover
-                        </h3>
-                        <p>Elaborated pop-overs over elements, with paragraphs.</p>
+                        <p>Video, audio and iframe.</p>
                     </a>
                 </li>
                 <li>
@@ -400,6 +400,17 @@
                     </a>
                 </li>
                 <li>
+                    <a href="popover.html" target="_self">
+                        <h3>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+                            </svg>
+                            Popover
+                        </h3>
+                        <p>Elaborated pop-overs over elements, with paragraphs.</p>
+                    </a>
+                </li>
+                <li>
                     <a href="tab.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -411,14 +422,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="multimedia.html" target="_self">
+                    <a href="tooltips.html" target="_self">
                         <h3>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                             </svg>
-                            Multimedia
+                            Tooltip
                         </h3>
-                        <p>Video, audio and iframe.</p>
+                        <p>Tiny informational pop-overs over elements.</p>
                     </a>
                 </li>
             </ul>

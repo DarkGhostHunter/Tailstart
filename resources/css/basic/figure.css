@@ -1,4 +1,9 @@
 @layer components {
+    /**
+     * Self-contained descriptive content.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/figure
+     */
     .fig {
         @apply border rounded p-2 mb-2;
 
@@ -7,7 +12,7 @@
         }
 
         & > figcaption {
-            @apply text-sm text-gray-400;
+            @apply text-sm text-gray-500 font-serif;
         }
     }
 }

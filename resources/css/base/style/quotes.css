@@ -1,9 +1,0 @@
-@layer base {
-    blockquote {
-        @apply px-3 py-2 border-l-8 border-dotted mb-3;
-    }
-
-    figure > blockquote + figcaption {
-        @apply text-sm text-gray-500 text-right;
-    }
-}

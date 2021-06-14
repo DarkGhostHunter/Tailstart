@@ -8,7 +8,7 @@
         @apply bg-white;
 
         /**
-         * This removes any Safari style, like the default inner shadow of inputs.
+         * This removes any style, like the default inner shadow of inputs.
          */
         appearance: none;
 
@@ -22,7 +22,7 @@
         /**
          * We add a common set of styles to all inputs set as "form-control".
          */
-        @apply outline-none rounded transition-all ring-0 ring-gray-200 cursor-pointer shadow-none;
+        @apply outline-none rounded transition-all ring-0 ring-gray-200 shadow-none;
 
         /**
          * If is form for date or time, we will add some sensitive sizing for iOS.
@@ -60,47 +60,40 @@
 
 
         /**
-         * If it's not disabled, we will apply styles on hover, focus and active states.
+         * If it's not disabled or read-only, we will apply styles on hover, focus and active states.
          */
-
         &:not(.disabled, :disabled) {
-            &:hover {
+            &:hover, &:focus {
                 @apply ring-4;
             }
 
             &:focus, &:active {
-                @apply ring-4 border-blue-400 ring-blue-200;
+                @apply border-blue-400 ring-blue-200;
+            }
+
+            /*
+             * We will shrink the ring when pressing it.
+             */
+            &:active {
+                @apply ring-2;
+
+                /*
+                 * Don't change the background on selects.
+                 */
+                &:not(select) {
+                    @apply bg-blue-50;
+                }
             }
         }
 
         /**
          * If it's disabled, we will disable the button and add some "disabled" style.
          */
-
         &.disabled, &:disabled {
             @apply pointer-events-none cursor-default bg-gray-200 text-gray-400;
 
             &::placeholder {
                 @apply text-gray-300;
-            }
-        }
-
-        &:not(select,[type="file"]):active {
-            @apply bg-blue-100 border-blue-100;
-        }
-
-        &:after {
-            @apply block clear-both;
-            content: "";
-        }
-
-        &:focus {
-            &::-webkit-slider-thumb {
-                @apply shadow-sm;
-            }
-
-            &::-moz-range-thumb {
-                @apply shadow-sm;
             }
         }
     }
@@ -167,7 +160,7 @@
         appearance: none;
 
         @apply block w-full p-0 h-2 my-2;
-        @apply border bg-gray-100 outline-none rounded-full cursor-pointer;
+        @apply border bg-gray-50 outline-none rounded-full cursor-pointer;
 
         &::range-thumb {
             appearance: none;
@@ -183,7 +176,7 @@
         }
 
         &.disabled, &:disabled {
-            @apply pointer-events-none;
+            @apply pointer-events-none bg-white;
 
             &::range-thumb {
                 @apply bg-gray-400;

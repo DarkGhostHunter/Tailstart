@@ -3,14 +3,14 @@
  *
  * Feel free to edit them, since these work after you add a distinctive class to them.
  */
-@import "components/badge.css";
-@import "components/progress.css";
 @import "components/alert.css";
-@import "components/card.css";
-@import "components/list.css";
-@import "components/header.css";
-@import "components/group.css";
-@import "components/table.css";
-@import "components/navigation.css";
+@import "components/badge.css";
 @import "components/breadcrumb.css";
+@import "components/card.css";
+@import "components/group.css";
+@import "components/header.css";
+@import "components/list.css";
+@import "components/navigation.css";
 @import "components/pagination.css";
+@import "components/progress.css";
+@import "components/table.css";

@@ -1,8 +1,14 @@
 @layer components {
+    /**
+     * If you add a multimedia player through an iframe, we will style it.
+     */
     .iframe, .mm-player {
         @apply h-auto w-full border rounded;
     }
 
+    /**
+     * For the iframe, we will allow it to expand and hide its overflowing contents.
+     */
     .iframe {
         @apply overflow-hidden;
 
@@ -11,11 +17,17 @@
         }
     }
 
+    /**
+     * This is main class to style the video and audio player.
+     */
     .mm-player {
         & .mm-title {
             @apply px-3 py-2 bg-gray-50 rounded-t mb-0 text-base;
         }
 
+        /**
+         * If there is an audio tag, we will hide it and let Javascript control it.
+         */
         & > audio {
             @apply hidden;
         }

@@ -1,0 +1,110 @@
+@layer base {
+    /**
+     * Location block with contact details.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/address
+     */
+    address {
+        @apply text-gray-700 font-serif;
+    }
+
+    /**
+     * Short inline quotation.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/q
+     */
+    q {
+        @apply font-serif italic text-gray-700;
+    }
+
+    /**
+     * Large-block quotation.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/blockquote
+     */
+    blockquote {
+        @apply px-3 py-2 border-l-8 mb-3 font-serif;
+    }
+
+    /**
+     * If we're using a figure to wrap a blockquote with a caption, we will
+     * style the caption accordingly.
+     */
+    figure > blockquote + figcaption {
+        @apply text-sm border-l-8 text-gray-500 text-right;
+    }
+
+    /**
+     * Highlighted text for notation.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/mark
+     */
+    mark {
+        @apply bg-yellow-300 bg-opacity-80;
+    }
+
+    /**
+     * Abbreviation or acronym.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/abbr
+     */
+    abbr {
+        @apply italic;
+    }
+
+    /**
+     * Term definition.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/dfn
+     */
+    dfn {
+        @apply italic;
+    }
+
+    /*
+     * We will style only those with the "title" property.
+     */
+    abbr[title], dfn[title] {
+        @apply cursor-help underline;
+        text-decoration-style: dotted;
+        text-decoration-color: theme('colors.gray.400');
+        text-decoration-thickness: 1px;
+    }
+
+    /**
+     * Text details and summary.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/details
+     */
+    details {
+        /**
+         * From here we will use some tricks to keep the summary consistent.
+         *
+         * @see https://css-tricks.com/two-issues-styling-the-details-element-and-how-to-solve-them/
+         */
+        & summary {
+            @apply cursor-pointer break-words;
+
+            & > * {
+                display: inline;
+            }
+        }
+    }
+
+    /**
+     * Keyboard inputs.
+     *
+     * @see https://developer.mozilla.org/docs/Web/HTML/Element/kbd
+     */
+    kbd {
+        &:after {
+            content: "";
+            @apply absolute inset-0;
+            @apply border border-white rounded;
+        }
+
+        @apply relative cursor-default inline-block px-2 rounded border border-gray-300 bg-gray-50;
+        @apply text-gray-600 bg-gradient-to-b from-gray-100 to-white;
+        @apply shadow-sm;
+    }
+}

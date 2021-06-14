@@ -2,7 +2,7 @@
     /**
      * Here you can add custom styles for checkboxes, radios and checkbox-switches.
      *
-     * Tailstart comes with some included guideliness to create your own.
+     * Tailstart comes with some included guidelines to create your own.
      */
     input[type="checkbox"].form-control,
     input[type="radio"].form-control {
@@ -85,7 +85,7 @@
     }
 
     /**
-     * Styling the radio is rather simple: roung the boxes and you're set.
+     * Styling the radio is rather simple: round the boxes and you're set.
      */
     input[type='radio'] {
         @apply rounded-full;
@@ -102,7 +102,7 @@
     /**
      * These are styles only for the checkbox.
      *
-     * Basically, we will create the "checkmark" by rotating a rectangle and positioning it.
+     * Basically, we will create the "checkmark" by rotating a rectangle and centering it.
      */
     input[type="checkbox"].form-control:not(.switch) {
         @apply rounded;

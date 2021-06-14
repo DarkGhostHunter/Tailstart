@@ -1,0 +1,44 @@
+@layer components {
+    /**
+     * We can override the details block.
+     */
+    .details {
+        @apply block border rounded px-3;
+
+        appearance: none;
+
+        /**
+         * The summary should have `.btn` so we don't reinvent the wheel.
+         */
+        & summary.btn {
+            /** We will apply "transition" to avoid animating the padding accidentally */
+            @apply relative border-0 block -ml-3 -mr-3 py-2 transition;
+
+            /**
+             * Here we will add the caret down.
+             */
+            &:after {
+                content: '';
+                @apply absolute right-0 top-0 h-full w-10 transition-all transform-gpu;
+                @apply bg-center bg-no-repeat;
+                background-size: 1rem 1rem;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E");
+            }
+        }
+
+        /**
+         * We can detect when the details box is open, and style accordingly.
+         */
+        &[open] {
+            @apply border-b;
+
+            & summary {
+                @apply border-b rounded-b-none mb-3;
+
+                &:after {
+                    @apply rotate-180;
+                }
+            }
+        }
+    }
+}

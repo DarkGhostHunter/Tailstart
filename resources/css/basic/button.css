@@ -5,6 +5,7 @@
      */
     .btn {
         @apply border rounded inline-block border px-3 py-1 outline-none transition-all ring-gray-200;
+
         /* These are just added styles if somebody uses an input[type="submit"] */
         @apply bg-white cursor-pointer;
 
@@ -16,11 +17,11 @@
         }
 
         /**
-         * We will not add any efect when the button is focused or hovered, but not active.
+         * We will not add any effect when the button is focused or hovered, but not active.
          *
          * When is active, we can change the ring size, but can go wild here.
          */
-        &:hover:not(:disabled,.disabled,:active), &:focus:not(:disabled,.disabled,:active) {
+        &:not(:disabled,.disabled,:active):focus {
             @apply outline-none ring-4;
         }
 
